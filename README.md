@@ -12,13 +12,14 @@ Including knowledge of toolchain on
 * Go / Rust
 * Linux / Mac OS
 
-The table
+The problems
+
+* How to reuse library without sharing source code
+* How to identify and locate runtime package
+
+The solutions
 
 | source file | source pkg | compiler |
 | --- | --- | --- |
 | [.ts](/dot-ts.md) | vue sfc | tsc |
 
-The problems
-
-* How to reuse library without sharing source code
-* How to identify and locate runtime package
