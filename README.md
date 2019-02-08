@@ -12,3 +12,8 @@ Including knowledge of toolchain on
 * Go / Rust
 * Linux / Mac OS
 
+The table
+
+| source file | source pkg | compiler |
+| --- | --- | --- |
+| .ts | vue sfc | tsc |
