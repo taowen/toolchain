@@ -17,3 +17,7 @@ The table
 | source file | source pkg | compiler |
 | --- | --- | --- |
 | [.ts](/dot-ts.md) | vue sfc | tsc |
+
+The problems
+
+* How to 
