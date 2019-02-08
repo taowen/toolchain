@@ -1,3 +1,6 @@
-# km
+# Know Your Stack
 
-knowledge management
+Including knowledge on
+
+* Javascript in browser / node
+* 
