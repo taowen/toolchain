@@ -20,4 +20,5 @@ The table
 
 The problems
 
+* How to reuse library without sharing source code
 * How to identify and locate runtime package
