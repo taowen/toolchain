@@ -16,4 +16,4 @@ The table
 
 | source file | source pkg | compiler |
 | --- | --- | --- |
-| .ts | vue sfc | tsc |
+| [.ts](/dot-ts.md) | vue sfc | tsc |
