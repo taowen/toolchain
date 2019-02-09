@@ -2,20 +2,19 @@
 
 编程使用的工具链正变得越来越复杂。你过去构建的知识体系所基于的技术栈，今天可能就会被抽象掉。并不是我们过去懂的东西现在不存在了，而是做为一块基石，被更高阶的抽象给代替了。无论这些工具的名字怎么五花八门，他们所尝试解决的问题都是相似的。从解决的问题入手，可以帮助我理解和记得这个庞杂的工具体系。
 
-这里会
-Including knowledge of toolchain on
+这里会讨论的工具链的范围如下：
 
 * Javascript in browser / node
 * Java
 * Go / Rust
 * Linux / Mac OS
 
-The problems
+工具链解决的问题
 
 * How to reuse library without sharing source code
 * How to identify and locate runtime package
 
-The solutions
+解决方案表
 
 | source file | source pkg | compiler |
 | --- | --- | --- |
