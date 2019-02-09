@@ -1,6 +1,6 @@
 # 编程工具链
 
-编程使用的工具链正变得越来越复杂。你过去构建的知识体系所基于的技术栈，今天可能就
+编程使用的工具链正变得越来越复杂。你过去构建的知识体系所基于的技术栈，今天可能就会被抽象掉。并不是我们过去懂的东西
 The toolchain of programming world is becoming increasingly complicated.
 The stack you built your knowlege system upon will be abstracted "away" tomorrow.
 Nothing will actaully go away, it just piles up.
