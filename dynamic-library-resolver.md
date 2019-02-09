@@ -77,5 +77,13 @@ import * as lib from 'http://localhost/library.js'
 console.log('i am the library')
 ```
 
-用浏览器访问 `http://localhost/index.html` 输出到
+用浏览器访问 `http://localhost/index.html` 输出到浏览器控制台
+
+```
+i am the library
+```
+
+基本上来说，ES6 Module对动态链接库的命名，以及resolve过程，和传统浏览器加载 script 标签是一样的。
+
+
 
