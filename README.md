@@ -1,6 +1,6 @@
 # 编程工具链
 
-编程使用的工具链正变得越来越复杂。你过去构建的知识体系所基于的技术栈，今天可能就会被抽象掉。并不是我们过去懂的东西现在不存在了，而是做为一块基石，被更高阶的抽象给代替了。无论这些工具的名字怎么五花八门，他们所尝试解决的问题都是
+编程使用的工具链正变得越来越复杂。你过去构建的知识体系所基于的技术栈，今天可能就会被抽象掉。并不是我们过去懂的东西现在不存在了，而是做为一块基石，被更高阶的抽象给代替了。无论这些工具的名字怎么五花八门，他们所尝试解决的问题都是相似的。从解决的问题入手，可以帮助我理解和记得这些工具。
 The toolchain of programming world is becoming increasingly complicated.
 The stack you built your knowlege system upon will be abstracted "away" tomorrow.
 Nothing will actaully go away, it just piles up.
