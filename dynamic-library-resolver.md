@@ -59,5 +59,23 @@
 * ld library path：加载 script 所在网页的 url
 * resolver：浏览器自身
 
+```html
+// http://localhost/index.html
+<html> 
+<head>
+<script type="module">
+import * as lib from 'http://localhost/library.js'
+</script>
+</head>
+<body> 
+</body>
+</html>
+```
 
+```js
+// http://localhost/library.js
+console.log('i am the library')
+```
+
+用浏览器访问 `http://localhost/index.html` 输出到
 
