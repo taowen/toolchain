@@ -19,7 +19,7 @@
 
 # 解决方案案例
 
-## 传统浏览器中的 JavaScript
+## 传统浏览器
 
 * dynamic library name：http/https 绝对 url 或者相对 url
 * ld library path：加载 script 所在网页的 url
@@ -52,6 +52,10 @@
 ```
 
 解析出来就是 `https://some-cdn.com/c/d.js`
+
+## 支持 ES6 Module 的浏览器
+
+
 
 
 
