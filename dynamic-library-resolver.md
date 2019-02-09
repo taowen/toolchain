@@ -55,7 +55,9 @@
 
 ## 支持 ES6 Module 的浏览器
 
-
+* dynamic library name：http/https 绝对 url 或者相对 url
+* ld library path：加载 script 所在网页的 url
+* resolver：浏览器自身
 
 
 
