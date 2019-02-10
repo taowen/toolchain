@@ -62,7 +62,7 @@ node --experimental-modules executor.mjs
 * exported symbol
   * `exports.my_func = function() {}` 定义和export合一
   * `function my_func() {}; exports.my_exported_func = my_func` 定义和export分离
-  * 没有 export default 这样的语法糖
+  * `module.exports = function() {}` 只导出一个符号，导入的时候也无需选择
 * imported symbol
   * `require('./library.js')` 只加载动态链接库，但是并不导入符号
   * `const my_func = require('./library.js').my_func` 导入链接库中的指定符号 my_func
