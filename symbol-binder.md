@@ -30,3 +30,7 @@
   * `import my_func from './library.mjs'` 把导出的 `default` 符号，导入并重命名为 my_func
   * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
 * binder：浏览器或者nodejs
+
+## CommonJS
+
+
