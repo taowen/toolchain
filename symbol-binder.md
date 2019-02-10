@@ -39,4 +39,4 @@
   * 没有 export default 这样的语法糖
 * imported symbol
   * `require('./library.js')` 只加载动态链接库，但是并不导入符号
-  * `
+  * `const my_func = require('./library.js').my_func` 
