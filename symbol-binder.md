@@ -22,4 +22,4 @@
 
 * exported symbol
   * `export function my_func() {}`
-  * `
+  * `function my_func() {}; export my_func as my_exported_func`
