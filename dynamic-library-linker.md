@@ -22,6 +22,8 @@ exectuable不会携带所有的算法实现。它会构建在executor提供的bu
 
 # 解决方案案例
 
+JavaScript 具有以下几种动态链接库的格式，多个
+
 ## 传统浏览器
 
 * executable：直接嵌入到 html 的 `<script>` 标签的 JavaScript 代码
