@@ -12,7 +12,7 @@ exectuable不会携带所有的算法实现。它会构建在executor提供的bu
 
 * executable：动态链接发起的源头，executor第一个加载的东西
 * dynamic library：提供被复用的算法，动态链接库
-* dynamic linker：executor的一个组件，提供动态链接的能力
+* dynamic library linker：一般是executor的一个组件，提供动态链接的能力。也可能是第三方利用executor的 api 独立实现的linker。
 
 ## 衍生的问题
 
