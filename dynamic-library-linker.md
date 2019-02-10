@@ -30,8 +30,8 @@ JavaScript 主流的动态链接库有以下几种，各自使用的linker是不
 | global | 传统浏览器 |
 | CJS (common js) | nodejs |
 | AMD (asynchronous module definition) | require.js |
-| System.register | system.js |
 | ES6 | nodejs / 现代浏览器 |
+| System.register | system.js |
 
 ## 传统浏览器
 
@@ -155,6 +155,52 @@ node /opt/executable.js
 // i am the library
 ```
 
+
+## AMD 的代表 require.js
+
+require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker。
+
+* executable：`<script data-main="exectuable.js" src="https://unpkg.com/requirejs@2.3.6/require.js">`
+* dynamic library：用 `define(function(require, exports, module) {})` 包装的 js 文件
+* dynamic library linker：require.js
+
+使用例子如下
+
+```html
+// http://localhost/index.html
+<html> 
+<head>
+<script data-main="executable.js" src="https://unpkg.com/requirejs@2.3.6/require.js"></script>
+</head>
+<body>
+</body>
+</html>
+```
+
+```js
+// http://localhost/executable.js
+define(function(require, exports, module) { 
+  const lib = require('./library.js')
+  console.log(lib.greeting)
+})
+```
+
+```js
+// http://localhost/library.js
+define(function(require, exports, module) {
+  exports.greeting = 'hello'
+})
+```
+
+用浏览器访问 http://localhost/index.html，在浏览器的控制台里输出
+
+
+```
+hello
+```
+
+在传统浏览器里实现了 nodejs 的 require/exports 的语法。底层使用的还是动态生成 script 标签的方式。
+
 ## 支持 ES6 Module 的浏览器
 
 支持 ES6 Module 的浏览器，Chrome 从61起
@@ -219,48 +265,3 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 * 添加 --experimental-modules 的命令行参数
 
 如果 import 的包不是相对路径，也是从 node_modules 里查找 package.json
-
-## require.js
-
-require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker。
-
-* executable：`<script data-main="exectuable.js" src="https://unpkg.com/requirejs@2.3.6/require.js">`
-* dynamic library：用 `define(function(require, exports, module) {})` 包装的 js 文件
-* dynamic library linker：require.js
-
-使用例子如下
-
-```html
-// http://localhost/index.html
-<html> 
-<head>
-<script data-main="executable.js" src="https://unpkg.com/requirejs@2.3.6/require.js"></script>
-</head>
-<body>
-</body>
-</html>
-```
-
-```js
-// http://localhost/executable.js
-define(function(require, exports, module) { 
-  const lib = require('./library.js')
-  console.log(lib.greeting)
-})
-```
-
-```js
-// http://localhost/library.js
-define(function(require, exports, module) {
-  exports.greeting = 'hello'
-})
-```
-
-用浏览器访问 http://localhost/index.html，在浏览器的控制台里输出
-
-
-```
-hello
-```
-
-在传统浏览器里实现了 nodejs 的 require/exports 的语法。底层使用的还是动态生成 script 标签的方式。
