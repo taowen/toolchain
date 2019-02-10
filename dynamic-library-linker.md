@@ -22,7 +22,12 @@ exectuable不会携带所有的算法实现。它会构建在executor提供的bu
 
 # 解决方案案例
 
-JavaScript 具有以下几种动态链接库的格式，多个
+JavaScript 具有以下几种动态链接库的格式
+
+| 动态链接库格式 | linker实现 |
+| --- | --- |
+| global | 传统浏览器 |
+| 
 
 ## 传统浏览器
 
