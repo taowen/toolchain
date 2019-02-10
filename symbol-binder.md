@@ -35,4 +35,4 @@
 
 * exported symbol
   * `exports.my_func = function() {}` 定义和export合一
-
+  * `function my_func() {}; exports.my_exported_func = my_func` 定义和export分离
