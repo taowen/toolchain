@@ -16,3 +16,7 @@
 
 ## typescript
 
+* source：.ts文件
+* executable：.js文件
+* compiler：tsc
+
