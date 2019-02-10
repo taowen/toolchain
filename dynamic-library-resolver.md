@@ -148,5 +148,14 @@ node /opt/level1/level2/executable.js
 
 但是如果使用 NODE_PATH 是不支持的，会出现提示
 
-
+```
+(node:1031) ExperimentalWarning: The ESM module loader is experimental. 
+Error [ERR_MODULE_RESOLUTION_LEGACY]: library not found by import in file:///home/taowen/test/level1/level2/executable.mjs. Legacy behavior in require() would have found it at /home/taowen/test/opt/node_modules/library/library.js 
+    at search (internal/modules/esm/default_resolve.js:39:15)
+    at Loader.resolve [as _resolve] (internal/modules/esm/default_resolve.js:65:11)
+    at Loader.resolve (internal/modules/esm/loader.js:58:33)
+    at Loader.getModuleJob (internal/modules/esm/loader.js:113:40)
+    at ModuleWrap.promises.module.link (internal/modules/esm/module_job.js:32:40)
+    at link (internal/modules/esm/module_job.js:31:36)
+```
 
