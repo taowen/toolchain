@@ -109,7 +109,14 @@ module.exports = function() {
 
 ```js
 // /opt/executor.js
-require my_func =
+const my_func = require('./library.js')
+my_func()
+```
+
+```
+node executor.js
+// Ouptut:
+// library called
 ```
 
 
