@@ -69,4 +69,9 @@ node --experimental-modules executor.mjs
   * `const lib = require('./library.js')` 把动态链接库整体导入为 lib
 binder：nodejs
 
+nodejs 的 require 语法的导入是拷贝值的行为，和ES6 Module不同
+
+```js
+// /opt/library.js
+
 
