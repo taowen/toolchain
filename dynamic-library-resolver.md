@@ -115,15 +115,12 @@ i am the library
 
 会尝试的 node_modules 路径包括
 
-* ./node_moduels
-* ../node_modules
+* ./node_moduels 当前目录下的 node_mdoules 目录
+* ../node_modules 父目录的 node_modules 目录
 * 省略
-* /
-
+* /node_modules 根目录的 node_modules 目录
 
 如果在当前目录一直到根目录的 node_modules 里都找不到指定的 dynamic library name，则会使用 NODE_PATH 去查找。
-
-
 
 ## 支持 ES6 Module 的 nodejs
 
