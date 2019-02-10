@@ -18,7 +18,7 @@
 
 传统浏览器没有 binder。全局共享一个namespace（window对象），动态链接库导出和导入通过读写全局变量实现。
 
-## ES6 Module
+## 支持 ES6 Module 的浏览器或者 nodejs
 
 * exported symbol
   * `export function my_func() {}` 定义和export合一
@@ -31,6 +31,7 @@
   * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
 * binder：浏览器或者nodejs
 
-## CommonJS
+## nodejs
 
-
+* exported symbol
+  * ``
