@@ -270,13 +270,13 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 
 基于 CJS 或者 AMD 都无法模拟实现 ES6 动态链接库的全部特性。System.register 是另外一种定义动态链接库的格式，它基于 ES5 的语法实现，可以完全模拟 ES6 Module 提供的特性。
 
-system.js 实现了 System.register 这种格式，可以运行在 node 或者浏览器里。
+system.js 实现了 System.register 这种格式，运行在支持 Promise 的浏览器里。
 
-* executable：node执行的js文件，或者浏览器html内嵌的script标签
+* executable：浏览器html内嵌的script标签
 * dynamic library：由 System.register 定义
 * dynamic library linker：s.js
 
-在 node 中使用，例如
+例如
 
 ```js
 // /opt/executable.js
