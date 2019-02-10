@@ -45,3 +45,6 @@ for (var _i = 0, messages_1 = messages; _i < messages_1.length; _i++) {
     console.log(elem);
 }
 ```
+
+可以看到类型信息没有了， for of 的语法被编译成了等价的普通的 for 循环
+
