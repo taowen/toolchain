@@ -87,5 +87,9 @@ i am the library
 
 ## nodejs
 
+| 类型 | 例子 | resolve 过程 |
+| 绝对路径 | /opt/library.js | 相对硬盘根目录查找文件 |
+|
+
 ## 支持 ES6 Module 的 nodejs
 
