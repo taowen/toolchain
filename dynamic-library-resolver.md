@@ -130,7 +130,10 @@ i am the library
       * library
         * package.json
         * library.js
-
+* /opt
+  * level1
+    * level2
+      * executable.js
 
 
 
