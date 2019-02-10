@@ -31,9 +31,30 @@
   * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
 * binder：浏览器或者nodejs
 
+ES6 Module 
+
 ```js
 // /opt/library.mjs
+export let my_var = 3 
+export function increase_my_var() {
+  my_var++
+}
+```
 
+```js
+// /opt/executor.mjs
+import {my_var, increase_my_var} from './library.mjs' 
+
+console.log(my_var)
+increase_my_var()
+console.log(my_var)
+```
+
+```
+node --experimental-modules executor.mjs
+// Output:
+// 3
+// 4
 ```
 
 ## nodejs
