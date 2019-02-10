@@ -13,10 +13,6 @@
 * ld library path：加载链接库要在哪里查找。最常用的是动态链接发起的文件所在路径，做为查找相对路径的参照
 * resolver：根据 dynamic library name 从 ld library path 里查找动态链接库
 
-## 衍生的问题
-
-* 多个 ld library path 都可以找到同一个动态链接库，应该用哪个?
-
 # 解决方案案例
 
 ## 传统浏览器
