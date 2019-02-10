@@ -245,4 +245,11 @@ define(function(require, exports, module) {
 })
 ```
 
-用
+用浏览器访问 http://localhost/index.html，在浏览器的控制台里输出
+
+
+```
+hello
+```
+
+是用
