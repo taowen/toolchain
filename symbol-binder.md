@@ -32,6 +32,7 @@
 * binder：浏览器或者nodejs
 
 ```js
+// /opt/library.mjs
 
 ```
 
