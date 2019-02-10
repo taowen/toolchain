@@ -28,4 +28,4 @@
   * `import './library.mjs'` 只加载动态链接库，但是并不导入符号
   * `import {my_func} from './library.mjs'` 导入动态链接库中的指定符号 my_func
   * `import my_func from './library.mjs'` 把导出的 `default` 符号，导入并重命名为 my_func
-  * `import *
+  * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
