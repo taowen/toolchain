@@ -92,13 +92,15 @@ i am the library
   * ./library.js
   * library.js
 * ld library path：NODE_PATH 环境变量
-* resolver：
+* resolver：nodejs自身
 
 | 类型 | 例子 | resolve 过程 |
 | --- | --- | --- |
 | 绝对路径 | /opt/library.js | 相对硬盘根目录查找文件 |
 | 相对路径 | ./library.js | 相对当前文件所在目录 |
 | bare module specifier | library.js | 先查找 node_modules，再查找 NODE_PATH 环境变量指定的路径 |
+
+当使用 bare module spcifier 的时候，查找
 
 
 
