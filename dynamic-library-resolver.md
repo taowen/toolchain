@@ -120,7 +120,7 @@ i am the library
 * 省略
 * /node_modules 根目录的 node_modules 目录
 
-如果在当前目录一直到根目录的 node_modules 里都找不到指定的 dynamic library name，则会使用 NODE_PATH 去查找。例如 NODE_PATH 如下 `/usr/lib/node_modules1:/opt/lib/node_modules2`
+如果在当前目录一直到根目录的 node_modules 里都找不到指定的 dynamic library name，则会使用 NODE_PATH 去查找。例如 NODE_PATH 如下 `/usr/lib/node_modules1:/usr/lib/node_modules2`
 
 
 * /usr
@@ -135,6 +135,9 @@ i am the library
     * level2
       * executable.js
 
+```
+NODE_PATH="/usr/lib/node_modules1:/usr/lib/node_modules
+```
 
 
 ## 支持 ES6 Module 的 nodejs
