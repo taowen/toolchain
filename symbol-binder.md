@@ -36,4 +36,7 @@
 * exported symbol
   * `exports.my_func = function() {}` 定义和export合一
   * `function my_func() {}; exports.my_exported_func = my_func` 定义和export分离
-  * 没有 ex
+  * 没有 export default 这样的语法糖
+* imported symbol
+  * `require('./library.js')` 只加载动态链接库，但是并不导入符号
+  * `
