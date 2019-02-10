@@ -34,4 +34,5 @@
 ## nodejs
 
 * exported symbol
-  * ``
+  * `exports.my_func = function() {}` 定义和export合一
+
