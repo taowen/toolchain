@@ -19,7 +19,7 @@ exectuable不会携带所有的算法实现。它会构建在executor提供的bu
 
 * [如何标识并定位动态链接库](dynamic-library-resolver.md)
 * [如何引用动态链接库指定的符号](symbol-binder.md)
-* [多种动态链接库格式如何互联互通](dynamic-library-adap
+* [多种动态链接库格式如何互联互通](dynamic-library-adapter.md)
 
 # 解决方案案例
 
