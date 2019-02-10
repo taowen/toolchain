@@ -272,4 +272,6 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 
 system.js 实现了 System.register 这种格式，可以运行在 node 或者浏览器里。
 
-* executable：
+* executable：node执行的js文件，或者浏览器html内嵌的script标签
+* dynamic library：由 System.register 定义
+* dynamic library linker：s.js
