@@ -21,4 +21,5 @@
 ## ES6 Module
 
 * exported symbol
-  * `export function 
+  * `export function my_func() {}`
+  * `
