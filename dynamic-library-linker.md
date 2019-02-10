@@ -232,5 +232,13 @@ require.js 是基于传统浏览器之上，用js自身实现的一个动态链�
 
 ```js
 // http://localhost/executable.js
-
+define(function(require, exports, module) { 
+  const lib = require('./library.js')
+  console.log(lib.greeting)
+})
 ```
+
+```js
+// http://localhost/library.js
+define(function(require, exports, module) {
+
