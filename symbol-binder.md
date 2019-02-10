@@ -31,6 +31,10 @@
   * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
 * binder：浏览器或者nodejs
 
+```js
+
+```
+
 ## nodejs
 
 * exported symbol
