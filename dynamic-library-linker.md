@@ -83,17 +83,6 @@ head.appendChild(script);
 </html>
 ```
 
-## require.js
-
-require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker。
-
-* executable
-* dynamic library
-* dynamic library linker：require.js
-
-
-
-
 ## 支持 ES6 Module 的浏览器
 
 支持 ES6 Module 的浏览器，Chrome 从61起
@@ -219,3 +208,11 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 * 添加 --experimental-modules 的命令行参数
 
 如果 import 的包不是相对路径，也是从 node_modules 里查找 package.json
+
+## require.js
+
+require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker。
+
+* executable：`<script data-main="exectuable.js" src="
+* dynamic library
+* dynamic library linker：require.js
