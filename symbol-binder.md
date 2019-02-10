@@ -21,5 +21,8 @@
 ## ES6 Module
 
 * exported symbol
-  * `export function my_func() {}` 定义和export
-  * `function my_func() {}; export {my_func as my_exported_func}`
+  * `export function my_func() {}` 定义和export合一
+  * `function my_func() {}; export {my_func as my_exported_func}` 定义和export分离
+  * `export default function my_func() {}` export成为特殊的符号`default`
+* imported symbol
+  * `import './library.mjs'` 
