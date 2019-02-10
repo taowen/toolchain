@@ -73,5 +73,28 @@ nodejs 的 require 语法的导入是拷贝值的行为，和ES6 Module不同
 
 ```js
 // /opt/library.js
+exports.my_var = 3 
+exports.increase_my_var = function() {
+  exports.my_var++
+}
+```
 
+```js
+// /opt/executor.js
+const {my_var, increase_my_var} = require('./library.js') 
+console.log(my_var)
+increase_my_var()
+console.log(my_var)
+console.log(require('./library.js').my_var)
+```
+
+```
+node executor.js
+// Output:
+// 3
+// 3
+// 4
+```
+
+我们可以看到导入这份my_var
 
