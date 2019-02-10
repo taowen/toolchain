@@ -102,5 +102,14 @@ node executor.js
 
 ```js
 // /opt/library.js
-/
+module.exports = function() {
+  console.log('library called')
+}
+```
+
+```js
+// /opt/executor.js
+require my_func =
+```
+
 
