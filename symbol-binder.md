@@ -18,4 +18,6 @@
 
 传统浏览器没有 binder。全局共享一个namespace（window对象），动态链接库导出和导入通过读写全局变量实现。
 
-## 支持 ES6 Module 的浏览器
+## ES6 Module
+
+* exported symbol：`export function() {} `
