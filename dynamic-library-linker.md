@@ -213,6 +213,7 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 
 require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker。
 
-* executable：`<script data-main="exectuable.js" src="
-* dynamic library
+* executable：`<script data-main="exectuable.js" src="https://unpkg.com/requirejs@2.3.6/require.js">`
+* dynamic library：用 `define(function(require, exports, module) {})` 包装的 js 文件
 * dynamic library linker：require.js
+
