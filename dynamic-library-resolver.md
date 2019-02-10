@@ -111,7 +111,10 @@ i am the library
     * level2
       * executable.js
 
-executable.js 引用 `
+/opt/level1/level2/executable.js 引用 `require('library')` 会使用 /opt/level1/node_modules/library/package.json 定义的动态链接库
+
+
+如果在
 
 
 
