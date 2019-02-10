@@ -42,7 +42,7 @@ export function increase_my_var() {
 ```
 
 ```js
-// /opt/executor.mjs
+// /opt/executable.mjs
 import {my_var, increase_my_var} from './library.mjs' 
 
 console.log(my_var)
@@ -51,7 +51,7 @@ console.log(my_var)
 ```
 
 ```
-node --experimental-modules executor.mjs
+node --experimental-modules executable.mjs
 // Output:
 // 3
 // 4
@@ -80,7 +80,7 @@ exports.increase_my_var = function() {
 ```
 
 ```js
-// /opt/executor.js
+// /opt/executable.js
 const {my_var, increase_my_var} = require('./library.js') 
 console.log(my_var)
 increase_my_var()
@@ -89,7 +89,7 @@ console.log(require('./library.js').my_var)
 ```
 
 ```
-node executor.js
+node executable.js
 // Output:
 // 3
 // 3
@@ -108,13 +108,13 @@ module.exports = function() {
 ```
 
 ```js
-// /opt/executor.js
+// /opt/executable.js
 const my_func = require('./library.js')
 my_func()
 ```
 
 ```
-node executor.js
+node executable.js
 // Ouptut:
 // library called
 ```
