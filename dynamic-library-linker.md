@@ -309,7 +309,7 @@ System.register([], function($__export, $__moduleContext) {
 });
 ```
 
-用浏览器访问 http://localhost/index.html，会在浏览器控制台打印
+用浏览器访问 `http://localhost/index.html`，会在浏览器控制台打印
 
 ```
 hello
