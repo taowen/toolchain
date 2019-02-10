@@ -31,7 +31,7 @@
   * `import * as lib from './library.mjs'` 把动态链接库整体导入为 lib
 * binder：浏览器或者nodejs
 
-ES6 Module 
+ES6 Module 的导入的是引用，如果源对象发生了变化，导入的符号也会跟着变化
 
 ```js
 // /opt/library.mjs
@@ -68,3 +68,5 @@ node --experimental-modules executor.mjs
   * `const my_func = require('./library.js').my_func` 导入链接库中的指定符号 my_func
   * `const lib = require('./library.js')` 把动态链接库整体导入为 lib
 binder：nodejs
+
+
