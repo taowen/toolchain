@@ -34,6 +34,7 @@ for (let elem of messages) {
 ```
 
 ```
+// --target ES3 把高版本的emcascript 
 tsc --target ES3 --outFile executable.js source.ts
 ```
 
