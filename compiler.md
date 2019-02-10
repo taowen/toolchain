@@ -20,3 +20,7 @@
 * executable：.js文件
 * compiler：tsc
 
+typescript 提供了两类编程上的便利
+
+* 给 javascript 增加了类型
+* 
