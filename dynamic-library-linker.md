@@ -265,3 +265,7 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 * 添加 --experimental-modules 的命令行参数
 
 如果 import 的包不是相对路径，也是从 node_modules 里查找 package.json
+
+## 实现 System.register 的 system.js
+
+基于 CJS 或者 
