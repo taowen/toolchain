@@ -87,12 +87,12 @@ i am the library
 
 ## nodejs
 
-nodejs 的 resolver 支持三种指定 library_name 的方式
-
-* dynamic library name
+* dynamic library name：nodejs 的 resolver 支持三种指定 library_name 的方式
   * /opt/library.js
   * ./library.js
   * library.js
+* ld library path：NODE_PATH 环境变量
+* resolver：
 
 | 类型 | 例子 | resolve 过程 |
 | --- | --- | --- |
