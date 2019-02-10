@@ -101,5 +101,6 @@ node executor.js
 定义唯一导出符号需要重新定义 `module.exports`
 
 ```js
-// /
+// /opt/library.js
+/
 
