@@ -241,4 +241,8 @@ define(function(require, exports, module) {
 ```js
 // http://localhost/library.js
 define(function(require, exports, module) {
+  exports.greeting = 'hello'
+})
+```
 
+用
