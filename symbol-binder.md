@@ -98,5 +98,8 @@ node executor.js
 
 我们可以看到导入这份 my_var 没有改变，而原始的那份 my_var 已经改变了。
 
+定义唯一导出符号需要重新定义 `module.exports`
 
+```js
+// /
 
