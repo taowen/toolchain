@@ -27,7 +27,9 @@ JavaScript 具有以下几种动态链接库的格式
 | 动态链接库格式 | linker实现 |
 | --- | --- |
 | global | 传统浏览器 |
-| 
+| CJS  |
+| AMD | require.js |
+| System.register | system.js |
 
 ## 传统浏览器
 
