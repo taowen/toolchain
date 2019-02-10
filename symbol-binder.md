@@ -8,4 +8,5 @@
 
 ## 构成
 
-* export: 链接库导出符号
+* exported symbol: 链接库导出的符号
+* imported symbol：
