@@ -114,7 +114,7 @@ i am the library
 /opt/level1/level2/executable.js 引用 `require('library')` 会使用 /opt/level1/node_modules/library/package.json 定义的动态链接库
 
 
-如果在
+如果在当前目录一直到根目录的 node_modules 里都找不到指定的 dynamic library name，则会使用 NODE_PATH 去查找。
 
 
 
