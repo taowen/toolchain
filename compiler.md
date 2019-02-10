@@ -34,5 +34,14 @@ for (let elem of messages) {
 ```
 
 ```
+tsc --target ES3 --outFile executable.js source.ts
+```
 
+```js
+// /opt/executable.js
+var messages = ['hello', 'world']; 
+for (var _i = 0, messages_1 = messages; _i < messages_1.length; _i++) {
+    var elem = messages_1[_i];
+    console.log(elem);
+}
 ```
