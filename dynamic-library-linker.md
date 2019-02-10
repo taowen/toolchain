@@ -85,7 +85,14 @@ head.appendChild(script);
 
 ## require.js
 
-require.js 是基于传统浏览器之上，用js自身实现的一个
+require.js 是基于传统浏览器之上，用js自身实现的一个动态链接库的linker
+
+* executable
+* dynamic library
+* dynamic library linker：require.js
+
+
+
 
 ## 支持 ES6 Module 的浏览器
 
