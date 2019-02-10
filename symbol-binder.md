@@ -8,5 +8,8 @@
 
 ## 构成
 
-* exported symbol: 链接库导出的符号
-* imported symbol：
+* exported symbol: 动态链接库导出的符号
+* imported symbol：导入的符号
+* binder：把导入的符号和导出的符号绑定到一起
+
+# 解决
