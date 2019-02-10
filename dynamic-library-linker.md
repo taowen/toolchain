@@ -280,4 +280,5 @@ system.js 实现了 System.register 这种格式，可以运行在 node 或者�
 
 ```js
 // /opt/executable.js
+System.import
 ```
