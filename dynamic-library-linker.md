@@ -94,41 +94,7 @@ head.appendChild(script);
 </html>
 ```
 
-## 支持 ES6 Module 的浏览器
-
-支持 ES6 Module 的浏览器，Chrome 从61起
-
-* exectuable：直接嵌入到 html 的 `<script type="module">` 标签的 JavaScript 代码
-* dynamic library：用 url 可以访问到的 javascript 文件
-* dynamic linker：浏览器根据 JavaScript 头部声明的 `import {yyy} from './xxx.js'`，动态加载相对当前 url 的 xxx.js
-
-和传统浏览器不同，import 引用的 js 会被浏览器加载，无需用 script 标签 src 引用进来。
-
-```js
-// http://localhost/library.js
-console.log('i am the library')
-```
-
-```html
-// http://localhost/index.html
-<html>
-<head>
-<script type="module">
-import './library.js'
-</script>
-</head>
-<body>
-</body>
-</html>
-```
-
-用浏览器访问 `http://localhost/index.html` 在浏览器的控制台输出
-
-```
-i am the library
-```
-
-## nodejs
+## CJS 的代表 nodejs
 
 * executable：直接用参数传递给 node 命令的 js 文件
 * dynamic library：js文件 或者 package.json 定义的 js package
@@ -187,6 +153,40 @@ node /opt/executable.js
 // Output:
 // i am the executable
 // i am the library
+```
+
+## 支持 ES6 Module 的浏览器
+
+支持 ES6 Module 的浏览器，Chrome 从61起
+
+* exectuable：直接嵌入到 html 的 `<script type="module">` 标签的 JavaScript 代码
+* dynamic library：用 url 可以访问到的 javascript 文件
+* dynamic linker：浏览器根据 JavaScript 头部声明的 `import {yyy} from './xxx.js'`，动态加载相对当前 url 的 xxx.js
+
+和传统浏览器不同，import 引用的 js 会被浏览器加载，无需用 script 标签 src 引用进来。
+
+```js
+// http://localhost/library.js
+console.log('i am the library')
+```
+
+```html
+// http://localhost/index.html
+<html>
+<head>
+<script type="module">
+import './library.js'
+</script>
+</head>
+<body>
+</body>
+</html>
+```
+
+用浏览器访问 `http://localhost/index.html` 在浏览器的控制台输出
+
+```
+i am the library
 ```
 
 ## 支持 ES6 Module 的 nodejs
