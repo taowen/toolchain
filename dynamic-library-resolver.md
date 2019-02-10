@@ -142,6 +142,7 @@ node /opt/level1/level2/executable.js
 
 在 /usr/lib/node_modules1 里没找到，就会去 /usr/lib/node_module2 里找，然后找到了
 
-
 ## 支持 ES6 Module 的 nodejs
+
+用 `import 'library'` 
 
