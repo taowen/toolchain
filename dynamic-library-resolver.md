@@ -102,7 +102,12 @@ i am the library
 
 举例说明 bare module spcifier，有如下的目录结构
 
-
+* /opt
+  * /opt/level1
+    * /opt/level1/node_modules
+      * package.json
+      * library
+    * /opt/level1/level2
 
 
 
