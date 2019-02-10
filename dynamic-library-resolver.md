@@ -87,6 +87,13 @@ i am the library
 
 ## nodejs
 
+nodejs 的 resolver 支持三种指定 library_name 的方式
+
+* dynamic library name
+  * /opt/library.js
+  * ./library.js
+  * library.js
+
 | 类型 | 例子 | resolve 过程 |
 | --- | --- | --- |
 | 绝对路径 | /opt/library.js | 相对硬盘根目录查找文件 |
