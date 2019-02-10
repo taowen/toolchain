@@ -100,7 +100,9 @@ i am the library
 | 相对路径 | ./library.js | 相对当前文件所在目录 |
 | bare module specifier | library.js | 先查找 node_modules，再查找 NODE_PATH 环境变量指定的路径 |
 
-当使用 bare module spcifier 的时候，查找
+举例说明 bare module spcifier，有如下的目录结构
+
+
 
 
 
