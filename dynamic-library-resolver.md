@@ -91,6 +91,8 @@ i am the library
 | --- | --- | --- |
 | 绝对路径 | /opt/library.js | 相对硬盘根目录查找文件 |
 | 相对路径 | ./library.js | 相对当前文件所在目录 |
+| bare module specifier | library.js | 先查找 node_modules，再查找 NODE_PATH 环境变量指定的路径 |
+
 
 
 ## 支持 ES6 Module 的 nodejs
