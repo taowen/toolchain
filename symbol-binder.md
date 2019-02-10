@@ -21,3 +21,4 @@
 ## ES6 Module
 
 * exported symbol
+  * `export function 
