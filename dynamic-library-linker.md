@@ -270,4 +270,6 @@ nodejs 使用 ES6 Module 的语法进行动态链接需要两个条件
 
 基于 CJS 或者 AMD 都无法模拟实现 ES6 动态链接库的全部特性。System.register 是另外一种定义动态链接库的格式，它基于 ES5 的语法实现，可以完全模拟 ES6 Module 提供的特性。
 
-system.js 实现了 
+system.js 实现了 System.register 这种格式，可以运行在 node 或者浏览器里。
+
+* executable：
