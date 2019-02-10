@@ -278,7 +278,24 @@ system.js 实现了 System.register 这种格式，运行在支持 Promise 的�
 
 例如
 
+```html
+// http://localhost/index.html
+<html> 
+<head>
+<script src="https://unpkg.com/systemjs@3.0.0/dist/s.js"></script>
+<script>
+(async () => {
+  let lib = await System.import('./library.js')
+  console.log(lib.greeting) 
+})()
+</script>
+</head>
+<body>
+</body>
+</html>
+```
+
 ```js
-// /opt/executable.js
+// /opt/library.js
 System.import('./library.js')
 ```
