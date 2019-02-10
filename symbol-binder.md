@@ -25,4 +25,6 @@
   * `function my_func() {}; export {my_func as my_exported_func}` 定义和export分离
   * `export default function my_func() {}` export成为特殊的符号`default`
 * imported symbol
-  * `import './library.mjs'` 
+  * `import './library.mjs'` 只加载动态链接库，但是并不导入符号
+  * `import {my_func} from './library.mjs'` 导入动态链接库中的指定符号 my_func
+  * `import my_func from 
