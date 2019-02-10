@@ -252,4 +252,4 @@ define(function(require, exports, module) {
 hello
 ```
 
-是用
+在传统浏览器里实现了 nodejs 的 require/exports 的语法。底层使用的还是动态生成 script 标签的方式。
