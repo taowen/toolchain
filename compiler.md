@@ -8,6 +8,11 @@
 
 ## 构成
 
-* source
+* source 源代码
+* compiler 编译器
+* executable
 
 # 解决方案案例
+
+## typescript
+
