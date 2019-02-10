@@ -146,3 +146,7 @@ node /opt/level1/level2/executable.js
 
 用 `import 'library'` 代替 `require('library')`，resolve的行为基本一致。
 
+但是如果使用 NODE_PATH 是不支持的，会出现提示
+
+
+
