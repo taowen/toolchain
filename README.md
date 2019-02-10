@@ -13,7 +13,7 @@
 
 | 问题 | 解决方案代号 |
 | --- | --- |
-| [如何用更高阶的
+| [如何用更高阶的编程语言来驱动机器减少工作量](compiler.md) | compiler |
 | [如何驱动机器按照人的要求自动化执行重复的工作](executor.md) | executor |
 | [如何复用其他人的工作，又不共享源代码](dynamic-library-linker.md) | dynamic library linker（executor 的一部分） |
 | [如何标识并定位动态链接库](/dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
@@ -21,7 +21,7 @@
 
 解决方案案例表
 
-| source file | source pkg | compiler |
+| source file | static library | compiler |
 | --- | --- | --- |
 | [.ts](/dot-ts.md) | vue sfc | tsc |
 
