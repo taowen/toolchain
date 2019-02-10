@@ -144,5 +144,5 @@ node /opt/level1/level2/executable.js
 
 ## 支持 ES6 Module 的 nodejs
 
-用 `import 'library'` 
+用 `import 'library'` 代替 `require('library'
 
