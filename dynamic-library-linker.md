@@ -274,7 +274,7 @@ system.js 实现了 System.register 这种格式，运行在支持 Promise 的�
 
 * executable：浏览器html内嵌的script标签
 * dynamic library：由 System.register 定义
-* dynamic library linker：s.js (system.js 的核心部分）
+* dynamic library linker：s.js （system.js 的核心部分）
 
 例如
 
@@ -296,7 +296,7 @@ system.js 实现了 System.register 这种格式，运行在支持 Promise 的�
 ```
 
 ```js
-// /opt/library.js
+// http://localhost/library.js
 System.register([], function($__export, $__moduleContext) { 
   let greeting = 'hello'
   $__export({
@@ -308,4 +308,10 @@ System.register([], function($__export, $__moduleContext) {
     }
   };
 });
+```
+
+用浏览器访问 http://localhost/index.html，会在浏览器控制台打印
+
+```
+hello
 ```
