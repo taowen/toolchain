@@ -39,4 +39,6 @@
   * 没有 export default 这样的语法糖
 * imported symbol
   * `require('./library.js')` 只加载动态链接库，但是并不导入符号
-  * `const my_func = require('./library.js').my_func` 
+  * `const my_func = require('./library.js').my_func` 导入链接库中的指定符号 my_func
+  * `const lib = require('./library.js')` 把动态链接库整体导入为 lib
+binder：nodejs
