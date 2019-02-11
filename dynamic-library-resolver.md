@@ -61,7 +61,18 @@ JavaScript 的几种动态链接库 linker 的解析名字的行为，如下表�
 
 ## AMD 的代表 require.js
 
+* dynamic library name：`requirejs(['app/main'])` 里指定的名字
+* ld library path：
+
 ```
+requirejs.config({
+    baseUrl: 'lib',
+    paths: {
+        app: '../app'
+    }
+});
+```
+
 
 ## CJS 的代表 nodejs
 
