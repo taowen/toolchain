@@ -54,11 +54,12 @@ console.log(unique(data));
 cd /opt/your_pkg
 yarn add uniq
 webpack --mode development
-// /opt/your_pkg/src/* 是默认的静态链接的 object
-// /opt/your_pkg/dist/main.js 是静态链接之后的 executable
 ```
 
-* object：/opt/your_pkg/src/*
+* object：/opt/your_pkg/src/* 是默认的静态链接的 object
+* executable：/opt/your_pkg/dist/main.js 是静态链接之后的 executable
+* static library：`require('uniq')`
+* static library linker：webpack
 
 ## rollup
 
