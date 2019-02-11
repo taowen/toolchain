@@ -15,7 +15,9 @@
 
 # 解决方案案例
 
-| linker | abso
+| linker | absolute path | relative path | bare specifier |
+| --- | --- | --- | --- |
+| 
 
 ## 传统浏览器
 
