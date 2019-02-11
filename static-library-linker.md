@@ -15,3 +15,6 @@
 * static library linker：把 object 和 static library 链接成 executable
 * executable：给 executor 执行用的可执行文件
 
+## 衍生的问题
+
+ruhe
