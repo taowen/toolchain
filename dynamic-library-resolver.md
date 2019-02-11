@@ -49,39 +49,8 @@
 
 解析出来就是 `https://some-cdn.com/c/d.js`
 
-## 支持 ES6 Module 的浏览器
 
-* dynamic library name：http/https 绝对 url 或者相对 url
-* ld library path：加载 script 所在网页的 url
-* resolver：浏览器自身
-
-```html
-// http://localhost/index.html
-<html> 
-<head>
-<script type="module">
-import * as lib from 'http://localhost/library.js'
-</script>
-</head>
-<body> 
-</body>
-</html>
-```
-
-```js
-// http://localhost/library.js
-console.log('i am the library')
-```
-
-用浏览器访问 `http://localhost/index.html` 输出到浏览器控制台
-
-```
-i am the library
-```
-
-基本上来说，ES6 Module对动态链接库的命名，以及resolve过程，和传统浏览器加载 script 标签是一样的。
-
-## nodejs
+## CJS 的代表 nodejs
 
 * dynamic library name：nodejs 的 resolver 支持三种指定 library_name 的方式
   * /opt/library.js
@@ -137,6 +106,38 @@ node /opt/level1/level2/executable.js
 ```
 
 在 /usr/lib/node_modules1 里没找到，就会去 /usr/lib/node_module2 里找，然后找到了
+
+## 支持 ES6 Module 的浏览器
+
+* dynamic library name：http/https 绝对 url 或者相对 url
+* ld library path：加载 script 所在网页的 url
+* resolver：浏览器自身
+
+```html
+// http://localhost/index.html
+<html> 
+<head>
+<script type="module">
+import * as lib from 'http://localhost/library.js'
+</script>
+</head>
+<body> 
+</body>
+</html>
+```
+
+```js
+// http://localhost/library.js
+console.log('i am the library')
+```
+
+用浏览器访问 `http://localhost/index.html` 输出到浏览器控制台
+
+```
+i am the library
+```
+
+基本上来说，ES6 Module对动态链接库的命名，以及resolve过程，和传统浏览器加载 script 标签是一样的。
 
 ## 支持 ES6 Module 的 nodejs
 
