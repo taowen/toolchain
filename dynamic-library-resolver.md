@@ -140,9 +140,9 @@ i am the library
 
 ## 支持 ES6 Module 的 nodejs
 
-用 `import 'library'` 代替 `require('library')`，resolve的行为基本一致。
+用 `import './library.js'` 代替 `require('./library.js')`，resolve的行为基本一致。
 
-但是如果使用 NODE_PATH 是不支持的，会出现提示
+但是如果使用 NODE_PATH 去做 `import 'library'` 是不支持的，会出现提示
 
 ```
 (node:1031) ExperimentalWarning: The ESM module loader is experimental. 
