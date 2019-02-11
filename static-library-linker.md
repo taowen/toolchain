@@ -18,8 +18,8 @@
 ## 衍生的问题
 
 * [如何标识并定位静态链接库](static-library-resolver.md)
-* [不和兼容不同的静态链接库的格式](static-library-adapter.md)
-* [如何减少静态链接后的体积](strip-symbol.md)
+* [如何兼容不同的静态链接库的格式](static-library-adapter.md)
+* [如何减少静态链接后的文件大小](symbol-stripper.md)
 
 # 解决方案案例
 
