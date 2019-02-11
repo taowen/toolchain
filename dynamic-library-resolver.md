@@ -49,7 +49,6 @@
 
 解析出来就是 `https://some-cdn.com/c/d.js`
 
-
 ## CJS 的代表 nodejs
 
 * dynamic library name：nodejs 的 resolver 支持三种指定 library_name 的方式
@@ -155,4 +154,9 @@ Error [ERR_MODULE_RESOLUTION_LEGACY]: library not found by import in file:///hom
     at ModuleWrap.promises.module.link (internal/modules/esm/module_job.js:32:40)
     at link (internal/modules/esm/module_job.js:31:36)
 ```
+
+因为 ES6 Module 规范还没有定义如何处理所谓的 `bare specifier`，所以 node.js 为了和标准保持一致，把自己实现的 NODE_PATH 给阉割掉了。
+
+
+
 
