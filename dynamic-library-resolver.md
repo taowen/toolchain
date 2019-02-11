@@ -59,12 +59,16 @@ JavaScript 的几种动态链接库 linker 的解析名字的行为，如下表�
 
 解析出来就是 `https://some-cdn.com/c/d.js`
 
+## AMD 的代表 require.js
+
+
+
 ## CJS 的代表 nodejs
 
 * dynamic library name：nodejs 的 resolver 支持三种指定 library_name 的方式
-  * /opt/library.js
-  * ./library.js
-  * library.js
+  * 绝对路径：/opt/library.js
+  * 相对路径：./library.js
+  * bare specifier：library.js
 * ld library path：NODE_PATH 环境变量
 * resolver：nodejs自身
 
