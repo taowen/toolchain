@@ -24,13 +24,15 @@
 ## browserify
 
 ```js
-// /opt/main.js
+// /opt/your_pkg/main.js
 var unique = require('uniq');
 var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
 console.log(unique(data));
 ```
 
 ```
+cd /opt/your_pkg
+yarn add uniq
 browserify main.js -o bundle.js
 ```
 
@@ -41,17 +43,21 @@ browserify main.js -o bundle.js
 
 ## webpack
 
-```
-cd /opt/your_pkg
-yarn add uniq
-```
-
 ```js
 // /opt/your_pkg/src/main.js
 var unique = require('uniq');
 var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
 console.log(unique(data));
 ```
+
+```
+cd /opt/your_pkg
+yarn add uniq
+webpack --mode development
+// O
+```
+
+
 
 ## rollup
 
