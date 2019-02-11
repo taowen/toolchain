@@ -6,4 +6,4 @@
 
 # 解决方案
 
-静态链接
+静态链接库 linker 在构建的时期，把多个 object 文件预先合并成一个完整的 executable。object 与 object 之间有
