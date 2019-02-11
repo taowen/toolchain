@@ -15,9 +15,11 @@
 
 # 解决方案案例
 
+JavaScript 的几种
+
 | linker | absolute path | relative path | bare specifier |
 | --- | --- | --- | --- |
-| 
+| global | http 或者 https
 
 ## 传统浏览器
 
