@@ -15,7 +15,7 @@
 
 # 解决方案案例
 
-JavaScript 的几种
+JavaScript 的几种动态链接库 linker 的解析名字的行为，如
 
 | linker | absolute path | relative path | bare specifier |
 | --- | --- | --- | --- |
