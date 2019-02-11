@@ -15,6 +15,8 @@
 
 # 解决方案案例
 
+| linker | abso
+
 ## 传统浏览器
 
 * dynamic library name：http/https 绝对 url 或者相对 url
