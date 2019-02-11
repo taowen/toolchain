@@ -20,8 +20,8 @@ JavaScript 的几种动态链接库 linker 的解析名字的行为，如下表�
 | linker | 绝对路径（/library.js） | 相对路径（./library.js） | bare specifier（library.js 或者 library） |
 | --- | --- | --- | --- |
 | global | http 或者 https 根据绝对路径 | 相对加载 html 页面的 url | 当相对路径处理 |
-| CJS | 从文件系统的绝对路径加载 | 相对当前js文件路径加载 | node_modules 链，NODE_PATH 兜底 |
 | AMD | | | |
+| CJS | 从文件系统的绝对路径加载 | 相对当前js文件路径加载 | node_modules 链，NODE_PATH 兜底 |
 | ES6 |  http 或者 https 根据绝对路径 | 相对加载 html 页面的 url | 不支持（import maps 的标准尚处于草案阶段） |
 | System.register | | | |
 
