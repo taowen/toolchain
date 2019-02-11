@@ -21,4 +21,11 @@
 
 # 解决方案案例
 
+## browserify
 
+```
+browserify main.js -o bundle.js
+```
+
+* object：main.js
+* execut
