@@ -17,4 +17,8 @@
 
 ## 衍生的问题
 
-ruhe
+* [如何标识并定位静态链接库](static-library-resolver.md)
+
+# 解决方案案例
+
+
