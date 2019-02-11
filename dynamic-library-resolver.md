@@ -74,8 +74,11 @@ requirejs.config({
 });
 ```
 
-对于 baseUrl
+对于 baseUrl 而言，如果使用了以下几种写法
 
+* 绝对路径：/library.js
+* 相对路径：./library.js
+* 
 
 ## CJS 的代表 nodejs
 
