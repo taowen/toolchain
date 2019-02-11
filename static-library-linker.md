@@ -18,6 +18,7 @@
 ## 衍生的问题
 
 * [如何标识并定位静态链接库](static-library-resolver.md)
+* [不和兼容不同的静态链接库的格式](static-library-
 
 # 解决方案案例
 
