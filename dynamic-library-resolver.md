@@ -20,7 +20,7 @@ JavaScript 的几种动态链接库 linker 的解析名字的行为，如下表�
 | linker | 绝对路径（/library.js） | 相对路径（./library.js） | bare specifier（library.js 或者 library） |
 | --- | --- | --- | --- |
 | global | http 或者 https 根据绝对路径 | 相对加载 html 页面的 url | 当相对路径处理 |
-| AMD | | | |
+| AMD | | | config |
 | CJS | 从文件系统的绝对路径加载 | 相对当前js文件路径加载 | node_modules 链，NODE_PATH 兜底 |
 | ES6 |  http 或者 https 根据绝对路径 | 相对加载 html 页面的 url | 不支持（import maps 的标准尚处于草案阶段） |
 | System.register | | | |
@@ -62,7 +62,7 @@ JavaScript 的几种动态链接库 linker 的解析名字的行为，如下表�
 ## AMD 的代表 require.js
 
 * dynamic library name：`requirejs(['app/main'])` 里指定的名字
-* ld library path：config里的 baseUrl
+* ld library path：config 里的 baseUrl
 * resolver：require.js
 
 ```
@@ -78,7 +78,9 @@ requirejs.config({
 
 * 绝对路径：/library.js
 * 相对路径：./library.js
-* 
+* 带后缀：library.js
+
+只有在 rqeuire('library') 的时候，才会使用 baseUrl 进行相对路径的查找。
 
 ## CJS 的代表 nodejs
 
