@@ -25,6 +25,8 @@ typescript 提供了两类编程上的便利
 * 给 javascript 增加了类型
 * 把高版本的 javascript 编译为低版本的 javascript 以兼容更多的 executor
 
+<<< @/compiler/tsc/source.ts
+
 ```typescript
 // /opt/source.ts
 let messages: string[] = ['hello', 'world'] 
