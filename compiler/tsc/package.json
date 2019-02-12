@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "tsc",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  }
+}

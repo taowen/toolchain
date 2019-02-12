@@ -1,5 +1,8 @@
 {
   "private": true,
+  "workspaces": [
+    "compiler/*"
+  ],
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build"
