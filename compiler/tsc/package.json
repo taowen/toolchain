@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "tsc",
+  "name": "@compiler/tsc",
   "version": "1.0.0",
   "scripts": {
     "build": "./build.sh"

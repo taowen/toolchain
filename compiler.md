@@ -19,7 +19,7 @@
 
 # 解决方案案例
 
-## typescript
+## tsc
 
 typescript 提供了两类编程上的便利
 

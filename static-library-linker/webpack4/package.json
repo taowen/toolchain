@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "webpack",
+  "name": "webpack4",
   "version": "1.0.0",
   "scripts": {
     "build": "./build.sh"

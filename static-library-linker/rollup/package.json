@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "rollup",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "dependencies": {
+    "rollup": "^1.1.2",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  }
+}

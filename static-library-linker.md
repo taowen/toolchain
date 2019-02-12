@@ -63,7 +63,24 @@ webpack 是一个更全面的静态链接库的链接器，是 browserify 的改
 
 ## rollup
 
-## typescript
+rollup 的出发点是改进静态链接库的格式。
+采用 ES6 Module 的导入导出语法，从而实现 tree-shaking 来减少静态链接后的文件尺寸。
+
+### src/main.js
+<<< @/static-library-linker/rollup/src/main.js
+
+### rollup.config.js
+<<< @/static-library-linker/rollup/rollup.config.js
+
+### build.sh
+<<< @/static-library-linker/rollup/build.sh
+
+| 构成 | 解释 |
+| --- | --- |
+| object | src/main.js |
+| static library | uniq |
+| static library linker | rollup |
+| executable | dist/bundle.js |
 
 
 
