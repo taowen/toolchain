@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "compiler/*"
+    "compiler/*",
+    "static-library-linker/*"
   ],
   "scripts": {
     "dev": "vuepress dev",

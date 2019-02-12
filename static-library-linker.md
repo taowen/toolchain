@@ -1,3 +1,5 @@
+[[toc]]
+
 # 要解决的问题
 
 * 复用其他人的工作
@@ -10,10 +12,12 @@
 
 ## 构成
 
-* object：第一方开发的可执行代码
-* static library：第三方开发的可执行代码
-* static library linker：把 object 和 static library 链接成 executable
-* executable：给 executor 执行用的可执行文件
+| 构成 | 解释 |
+| --- | --- |
+| object | 第一方开发的可执行代码 |
+| static library | 第三方开发的可执行代码 |
+| static library linker | 把 object 和 static library 链接成 executable |
+| executable | 给 executor 执行用的可执行文件 |
 
 ## 衍生的问题
 
@@ -25,23 +29,19 @@
 
 ## browserify
 
-```js
-// /opt/your_pkg/main.js
-var unique = require('uniq');
-var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
-console.log(unique(data));
-```
+browserify 把多个 CJS 格式的静态链接库链接成一个完整自包含的executable。
+### main.js
+<<< @/static-library-linker/browserify/main.js
 
-```
-cd /opt/your_pkg
-yarn add uniq
-browserify main.js -o bundle.js
-```
+### build.sh
+<<< @/static-library-linker/browserify/build.sh
 
-* object：main.js
-* executable：bundle.js
-* static library：`require('uniq')`
-* static library linker：browserify
+| 构成 | 解释 |
+| --- | --- |
+| object | main.js |
+| static library | uniq |
+| static library linker | browserify |
+| executable | bundle.js |
 
 ## webpack
 

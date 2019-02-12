@@ -14,11 +14,11 @@
 | 问题 | 解决方案代号 |
 | --- | --- |
 | [如何用更高阶的编程语言来驱动机器减少工作量](compiler.md) | compiler |
+| [如果复用其他人的工作又不需要运行时去额外加载](static-library-linker.md) | static library linker |
 | [如何驱动机器按照人的要求自动化执行重复的工作](executor.md) | executor |
 | [如何复用其他人的工作又减少executable的体积](dynamic-library-linker.md) | dynamic library linker（一般是 executor 的一部分） |
 | [如何标识并定位动态链接库](/dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
-| [如果复用其他人的工作又不需要运行时去额外加载](static-library-linker.md) | static library linker |
 
 解决方案案例表
 
