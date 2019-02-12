@@ -30,6 +30,7 @@
 ## browserify
 
 browserify 把多个 CJS 格式的静态链接库链接成一个完整自包含的executable。
+
 ### main.js
 <<< @/static-library-linker/browserify/main.js
 
@@ -45,23 +46,20 @@ browserify 把多个 CJS 格式的静态链接库链接成一个完整自包含�
 
 ## webpack
 
-```js
-// /opt/your_pkg/src/main.js
-var unique = require('uniq');
-var data = [1, 2, 2, 3, 4, 5, 5, 5, 6];
-console.log(unique(data));
-```
+webpack 是一个更全面的静态链接库的链接器，是 browserify 的改进。
 
-```
-cd /opt/your_pkg
-yarn add uniq
-webpack --mode development
-```
+### src/main.js
+<<< @/static-library-linker/webpack4/src/main.js
 
-* object：/opt/your_pkg/src/* 是默认的静态链接的 object
-* executable：/opt/your_pkg/dist/main.js 是静态链接之后的 executable
-* static library：`require('uniq')`
-* static library linker：webpack
+### build.sh
+<<< @/static-library-linker/webpack4/build.sh
+
+| 构成 | 解释 |
+| --- | --- |
+| object | src/main.js |
+| static library | uniq |
+| static library linker | webpack |
+| executable | dist/bundle.js |
 
 ## rollup
 

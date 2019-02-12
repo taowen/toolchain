@@ -1,0 +1,1 @@
+webpack --mode development --entry ./src/main.js --output ./dist/bundle.js
