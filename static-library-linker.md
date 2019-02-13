@@ -8,7 +8,8 @@
 
 # 解决方案
 
-静态链接库 linker 在构建的时期，把 object 文件和 static library 预先合并成一个完整的 executable。object 与 static library 彼此知道自己的链接关系。
+静态链接库 linker 在构建的时期，把 object 文件和 static library 预先合并成一个完整的 executable。
+object 与 static library 彼此知道自己的链接关系。
 
 ## 构成
 
