@@ -22,6 +22,25 @@
 
 # 解决方案案例
 
+## tsc
 
+### src/main.ts
+<<< @/source-library-linker/tsc/src/main.ts
+
+### src/lib.ts
+<<< @/source-library-linker/tsc/src/lib.ts
+
+### build.sh
+<<< @/source-library-linker/tsc/build.sh
+
+### dist/object.js
+<<< @/source-library-linker/tsc/dist/object.js
+
+| 构成 | 对应 |
+| --- | --- |
+| source library | .ts 文件 |
+| static library | CJS / AMD / ES6 Module |
+| object | 合并成 .js 文件 |
+| source library linker | tsc |
 
 

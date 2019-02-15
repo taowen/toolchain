@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "@source-library-linker/tsc",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "dependencies": {
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  }
+}
