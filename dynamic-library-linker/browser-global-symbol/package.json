@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "browser-global-symbol",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
+}

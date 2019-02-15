@@ -1,3 +1,5 @@
+[[toc]]
+
 # 要解决的问题
 
 * 复用其他人的工作
@@ -11,9 +13,11 @@ exectuable不会携带所有的算法实现。它会构建在executor提供的bu
 
 ## 构成
 
-* executable：动态链接发起的源头，executor第一个加载的东西
-* dynamic library：提供被复用的算法，动态链接库
-* dynamic library linker：一般是executor的一个组件，提供动态链接的能力。也可能是第三方利用executor的 api 独立实现的linker。
+| 构成 | 解释 |
+| --- | --- |
+| executable | 动态链接发起的源头，executor第一个加载的东西 |
+| dynamic library | 提供被复用的算法，动态链接库 |
+| dynamic library linker | 一般是executor的一个组件，提供动态链接的能力。也可能是第三方利用executor的 api 独立实现的linker。 |
 
 ## 衍生的问题
 
@@ -33,42 +37,30 @@ JavaScript 主流的动态链接库有以下几种，各自使用的linker是不
 | ES6 | nodejs / 现代浏览器 |
 | System.register | system.js |
 
-## 传统浏览器
+## 传统浏览器 - 全局命名空间
 
-* executable：直接嵌入到 html 的 `<script>` 标签的 JavaScript 代码
-* dynamic library：由 html 文件的 `<script src="xxx">` 引用的 .js 文件
-* dynamic linker：浏览器自身，通过全局变量实现彼此的互通。script标签的顺序决定了加载顺序，后被加载的js可以引用前面js定义的全局变量。
+### index.html
+<<< @/dynamic-library-linker/browser-global-symbol/index.html
 
-```js
-// http://localhost/library.js
-function call_library() { 
-  console.log('i am the library')
-}
-```
+### library.js
+<<< @/dynamic-library-linker/browser-global-symbol/library.js
 
-```html
-// http://localhost/index.html
-<html>
-<head>
-<script src="./library.js"></script>
-<script>
-console.log('i am the executable')
-call_library() // window.call_library()
-</script>
-</head>
-<body>
-</body>
-</html>
-```
+### build.sh
+<<< @/dynamic-library-linker/browser-global-symbol/build.sh
+
+### output.txt
+<<< @/dynamic-library-linker/browser-global-symbol/output.txt
 
 executable 和 dynamic library 之间的通过全局变量 window 上的全局变量实现互相调用。
 `call_library` 这个函数其实就是定义在 `window` 上的变量。
-用浏览器访问 `http://localhost/index.html` 在浏览器的控制台输出
 
-```
-i am the executable
-i am the library
-```
+| 构成 | 对应 |
+| --- | --- |
+| executable | 直接嵌入到 index.html 的 `<script>` 标签的 JavaScript 代码 |
+| dynamic library | library.js |
+| dynamic linker | 浏览器 |
+
+## 传统浏览器 - 动态 script 标签
 
 JavaScript 代码内没有直接的动态加载的支持，用 script 标签加载的 url 无法动态计算出来。一个hack的方法是通过 DOM API 创建 script 标签。
 
