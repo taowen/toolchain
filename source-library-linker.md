@@ -43,4 +43,23 @@
 | object | 合并成 .js 文件 |
 | source library linker | tsc |
 
+## go
 
+### go.mod
+<<< @/source-library-linker/go/go.mod
+
+### main.go
+<<< @/source-library-linker/go/main.go
+
+### lib/lib.go
+<<< @/source-library-linker/go/lib/lib.go
+
+### build.sh
+<<< @/source-library-linker/go/build.sh
+
+| 构成 | 对应 |
+| --- | --- |
+| source library | 包含 .go 文件的目录 |
+| static library | 其他包含 .a 文件的目录 |
+| object | 产生的二进制可执行文件 |
+| source library linker | go |
