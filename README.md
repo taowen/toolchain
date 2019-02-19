@@ -25,3 +25,9 @@
 | [如何标识并定位动态链接库](dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
 
+作者邀请表
+
+* taowen
+  * qinguanri
+* zhanghuanming
+* yuhongyu
