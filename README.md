@@ -18,6 +18,7 @@
 | [如何标识并定位动态链接库](dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
 | [如何理解高级语言的垃圾回收](garbage-collection.md) | garbage collection |
+| [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation |
 
 作者邀请表
 
@@ -25,4 +26,4 @@
   * [qinguanri](https://github.com/qinguanri)
 * zhanghuanming
 * yuhongyu
-  * chenyi
+  * [chenyi](https://github.com/mrgeneralgoo)
