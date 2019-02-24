@@ -6,14 +6,7 @@
 以他们所解决的问题来主轴，可以建立一个网络形式的知识索引，方便记忆。
 同时把解决相似问题的解决方案罗列在一起，可以达到触类旁通的效果。
 
-这里会讨论的工具链的范围如下：
-
-* Javascript in browser / node
-* Java
-* Go / Rust
-* Linux / Mac OS
-
-工具链解决的问题
+解决的问题
 
 | 问题 | 解决方案代号 |
 | --- | --- |
@@ -32,3 +25,4 @@
   * [qinguanri](https://github.com/qinguanri)
 * zhanghuanming
 * yuhongyu
+  * chenyi

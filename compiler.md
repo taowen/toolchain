@@ -42,6 +42,25 @@ typescript 提供了两类编程上的便利
 | source | source.ts |
 | executable | executable.js |
 | compiler | tsc |
+| executor | node.js 或者浏览器 |
 
+## rustc
+
+rust 提供了更灵活和安全的类型系统来辅助描述驱动机器的逻辑
+
+### hello.rs
+<<< @/compiler/rustc/hello.rs
+
+### build.sh
+<<< @/compiler/rustc/build.sh
+
+编译出来的是二进制的可执行文件，运行在CPU上
+
+| 构成 | 对应 |
+| --- | --- |
+| source | hello.rs |
+| executable | ./hello |
+| compiler | rustc |
+| executor | CPU |
 
 
