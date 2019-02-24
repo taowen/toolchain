@@ -83,5 +83,35 @@ rollup 的出发点是改进静态链接库的格式。
 | static library linker | rollup |
 | executable | dist/bundle.js |
 
+## gcc
+
+ar 把多个 linux 下用 c 编译出来的 .o 文件，合并成 .a 静态链接文件
+
+gcc 把 .o 文件和 .a 文件静态链接成 executable
+
+### file1.c
+<<< @/static-library-linker/gcc/file1.c
+
+### file2.c
+<<< @/static-library-linker/gcc/file2.c
+
+### build1.sh
+<<< @/static-library-linker/gcc/build1.sh
+
+演示静态链接库如何产生出来
+
+### main.c
+<<< @/static-library-linker/gcc/main.c
+
+### build2.sh
+<<< @/static-library-linker/gcc/build2.sh
+
+演示静态链接库如何被使用
 
 
+| 构成 | 解释 |
+| --- | --- |
+| object | file1.o file2.o main.o |
+| static library | lib12.a |
+| static library linker | gcc |
+| executable | ./main |
