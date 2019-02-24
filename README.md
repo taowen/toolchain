@@ -17,11 +17,12 @@
 | [如何复用其他人的工作又减少executable的文件尺寸](dynamic-library-linker.md) | dynamic library linker（一般是 executor 的一部分） |
 | [如何标识并定位动态链接库](dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
+| [如何理解高级语言的垃圾回收](garbage-collection.md) | garbage collection |
 
 作者邀请表
 
 * [taowen](https://github.com/taowen)
-  * qinguanri
+  * [qinguanri](https://github.com/qinguanri)
 * zhanghuanming
 * yuhongyu
   * chenyi
