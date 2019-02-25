@@ -19,6 +19,7 @@
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
 | [如何理解高级语言的垃圾回收](garbage-collection.md) | garbage collection |
 | [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation |
+| [如何降低异步编程的难度](asynchronous-programming.md) | asynchronous programming |
 
 作者邀请表
 
