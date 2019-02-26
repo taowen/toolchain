@@ -36,7 +36,6 @@ public class ConcurrentRpc {
         rpcC(rpcA(), rpcB()).blockingSubscribe(a -> System.out.println(a));
         System.out.println(System.currentTimeMillis() - start);
 
-        Thread.sleep(10000);
     }
 }
 
