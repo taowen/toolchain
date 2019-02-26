@@ -2,15 +2,14 @@ package main
 
 import (
     "fmt"
-    "math/rand"
 )
 
-func searchKeyword(kw string) chan int {
+func searchKeyword(kw string) chan string{
     fmt.Printf("search %s\n", kw);
 
     pages := make(chan string)
     urls := make(chan string)
-    rooms := make(chan int)
+    rooms := make(chan string)
 
     pages <- fmt.Sprintf("http://seed.page/%s", kw)
 
@@ -29,7 +28,7 @@ func fetchPages(pages chan string, urls chan string) {
         fmt.Println(page)
 
         for i := 0; i < 10; i++{
-            urls <- fmt.Sprintf("http://sub.link/%d", i)
+            urls <- fmt.Sprintf("http://sub.link/%d/%d", curPage, i)
         }
 
         for j := 0; j < 2 && curPage < maxPageCount; j++ {
@@ -39,12 +38,11 @@ func fetchPages(pages chan string, urls chan string) {
     }
 }
 
-func fetchUrls(urls chan string, rooms chan int) {
+func fetchUrls(urls chan string, rooms chan string) {
     for ;; {
         url := <-urls
-        fmt.Println(url)
 
-        rooms <- rand.Int()
+        rooms <-url[:10]
     }
 }
 
