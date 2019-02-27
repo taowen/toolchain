@@ -24,8 +24,8 @@
 作者邀请表
 
 * [taowen](https://github.com/taowen)
-  * [qinguanri](https://github.com/qinguanri)
-  * zhangkun
+* [qinguanri](https://github.com/qinguanri)
+* zhangkun
 * zhanghuanming
 * yuhongyu
   * [chenyi](https://github.com/mrgeneralgoo)
