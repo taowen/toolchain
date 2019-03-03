@@ -21,10 +21,9 @@
 | [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation 
 | [如何降低异步编程的难度](asynchronous-programming.md) | asynchronous programming | [如何深入准确地理解一门高阶语言的特性](functional-programming.md) | functional programming
 |  
-
+|[如何理解GO GC原理和优化思路](golang-garbage-collection.md)|golang garbage collection|
 
 作者邀请表
-
 * [taowen](https://github.com/taowen)
 * [qinguanri](https://github.com/qinguanri)
 * zhangkun
