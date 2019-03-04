@@ -65,4 +65,4 @@ ghci>fmap (+1) [0..9]
 
 ### Java函数式编程示例
 
-<<< @/functional-programming/ConcurrentRpc.java
+<<< @/functional-programming/TestFunction.java
