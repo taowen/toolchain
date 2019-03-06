@@ -115,3 +115,33 @@ gcc 把 .o 文件和 .a 文件静态链接成 executable
 | static library | lib12.a |
 | static library linker | gcc |
 | executable | ./main |
+
+## rustc
+
+rustc 可以编译 .a 文件，也可以把多个 .a 文件链接成可执行文件
+
+### file1.rs
+<<< @/static-library-linker/rustc/file1.rs
+
+### file2.rs
+<<< @/static-library-linker/rustc/file2.rs
+
+### build1.sh
+<<< @/static-library-linker/rustc/build1.sh
+
+演示静态链接库如何产生出来
+
+### main.rs
+<<< @/static-library-linker/rustc/main.rs
+
+### build2.sh
+<<< @/static-library-linker/rustc/build2.sh
+
+演示静态链接库如何被使用
+
+| 构成 | 解释 |
+| --- | --- |
+| object | 没有 |
+| static library | libfile1.a libfile2.a |
+| static library linker | rustc |
+| executable | ./main |
