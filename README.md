@@ -39,6 +39,8 @@ yarn dev
 
 * [taowen](https://github.com/taowen)
 * [qinguanri](https://github.com/qinguanri)
+  * zhangchengshuai
+  * nizeyang
 * zhangkun
 * zhanghuanming
 * yuhongyu
