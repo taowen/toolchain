@@ -63,4 +63,51 @@ rust 提供了更灵活和安全的类型系统来辅助描述驱动机器的逻
 | compiler | rustc |
 | executor | CPU |
 
+## vue-loader
 
+webpack/vue-loader/vue-template-compiler 组合成了一个完整的编译器。
+它可以把一个 .vue 单文件组件编译成 javascript 写成的 render 函数。
+.vue 单文件组件，可以使用 vue 的模板语法，比 javascript 渲染 dom 的写法更可读。
+
+### hello.vue
+<<< @/compiler/vue-loader/src/hello.vue
+
+### webpack.config.js
+<<< @/compiler/vue-loader/webpack.config.js
+
+### build.sh
+<<< @/compiler/vue-loader/build.sh
+
+编译出来的 hello.js 文件是这个样子的
+
+### hello.js
+<<< @/compiler/vue-loader/dist/hello.js
+
+其中 eval 的关键源代码，就是把 vue 模板编译出来的 javascript 代码
+
+```js
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c(
+      "ul",
+      _vm._l(_vm.items, function(item) {
+        return _c("li", [_vm._v(_vm._s(item))])
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+```
+
+使用这个编译好的 hello.js 文件
+
+### index.html
+<<< @/compiler/vue-loader/index.html
