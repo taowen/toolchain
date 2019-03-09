@@ -21,6 +21,10 @@ GC标记-清除，引用计数，GC复制算法是3个经典的垃圾回收算�
 | allocation | 为对象分配空闲分块的过程 |
 | collection | 回收垃圾分块的过程 |
 
+## 衍生的问题
+
+* [如何降低垃圾回收的最大暂停时间](reduce-stw-max-time.md)
+
 # 解决方案案例
 
 ## Golang 的 GC
