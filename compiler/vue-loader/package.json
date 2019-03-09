@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "@compiler/vue-loader",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "dependencies": {
+    "vue": "^2.6.8"
+  },
+  "devDependencies": {
+    "serve": "^10.1.2",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.8",
+    "webpack-cli": "^3.2.3"
+  }
+}
