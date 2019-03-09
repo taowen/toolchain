@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "@compiler/rollup-plugin-vue",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "module": "dist/hello.js",
+  "dependencies": {
+    "rollup": "^1.6.0"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-vue": "^4.7.2"
+  }
+}

@@ -78,7 +78,7 @@ webpack/vue-loader/vue-template-compiler 组合成了一个完整的编译器。
 ### build.sh
 <<< @/compiler/vue-loader/build.sh
 
-编译出来的 hello.js 文件是这个样子的
+编译出来的 hello.js 文件是这个样子的。它全局定义了 hello 这个变量。
 
 ### hello.js
 <<< @/compiler/vue-loader/dist/hello.js
@@ -111,3 +111,34 @@ render._withStripped = true
 
 ### index.html
 <<< @/compiler/vue-loader/index.html
+
+
+## rollup-plugin-vue
+
+rollup/rollup-plugin-vue/vue-template-compiler 组合成了一个完整的编译器。
+它可以把一个 .vue 单文件组件编译成 javascript 写成的 render 函数。
+.vue 单文件组件，可以使用 vue 的模板语法，比 javascript 渲染 dom 的写法更可读。
+
+### hello.vue
+<<< @/compiler/rollup-plugin-vue/src/hello.vue
+
+### rollup.config.js
+<<< @/compiler/rollup-plugin-vue/rollup.config.js
+
+### build.sh
+<<< @/compiler/rollup-plugin-vue/build.sh
+
+编译出来的 hello.js 文件是这个样子的。它是一个 es6 的 module
+
+### hello.js
+<<< @/compiler/rollup-plugin-vue/dist/hello.js
+
+通过 package.json 发布出去，可以被做为一个 es6 模块引用
+
+### package.json
+<<< @/compiler/rollup-plugin-vue/package.json
+
+通过 es6 模块引用编译好的 .vue 文件
+
+### App.vue
+<<< @/compiler/rollup-plugin-vue/demo/App.vue
