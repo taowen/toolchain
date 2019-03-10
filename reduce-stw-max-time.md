@@ -57,7 +57,7 @@ incremental_gc(){
 
 下次执行垃圾回收 incremental_gc() 函数时，执行进行标记阶段的处理。标记阶段从栈中取出灰色对象进行打色标记，这也是一个增量的过程，每次只处理一定数量的灰色对象后就将控制权继续交回给 mutator，避免一次性处理所有灰色对象导致 mutator 暂停时间过长。当栈中所有灰色对象都被处理后，将 gc_phase 设置为 GC_SWEEP。
 
-之后再进入 incremental_gc 时，进入清除阶段，incremental_sweep_phase 函数每次只清楚堆中一定数量的白色对象，然后将控制权交给 mutator。
+之后再进入 incremental_gc 时，进入清除阶段，incremental_sweep_phase 函数每次只清除堆中一定数量的白色对象，然后将控制权交给 mutator。
 
 ##### 根查找阶段
 
@@ -109,6 +109,10 @@ incremental_mark_phase(){
 ```
 
 值得注意的是，collector 进行根查找阶段结束后，由 mutator 继续运行，期间可能会分配新的活动对象，或者对象之间的引用指针发生更新，collector 在进入标记阶段时，如果不处理这些情况，会导致错误地回收正在活动对象，引发程序 bug。因此，对于新分配的活动对象，在标记阶段的最后一步可以通过再次遍历根来解决。而对于对象之间引用关系发生更新的情况，通过写入屏障（write_barrier）的方法来解决。
+
+###### 衍生的问题:
+
+* [如何解决并发垃圾回收导致的同步问题](cms-write-barrier.md)
 
 ##### 清除阶段
 
