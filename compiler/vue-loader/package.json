@@ -6,12 +6,12 @@
     "build": "./build.sh"
   },
   "dependencies": {
-    "vue": "^2.6.8"
+    "vue": "^2.6.5"
   },
   "devDependencies": {
     "serve": "^10.1.2",
     "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.6.8",
+    "vue-template-compiler": "^2.6.5",
     "webpack-cli": "^3.2.3"
   }
 }
