@@ -62,3 +62,57 @@ Golang GC 垃圾回收算法采用的是三色标记法，原理如下:
 ## Golang GC 优化实战样例
 
 ### gctrace 跟踪实时的gc
+ 
+- 启动gctrace
+```$xslt
+GODEBUG=gctrace=1  go run main.go
+//GODEBUG=gctrace=1 ./main
+```
+- 效果如下图:
+
+![img](./golang-garbage-collection/WX20190310-214034@2x.png)
+
+说明:
+```$xslt
+gc 1 @0.001s 0%: 0.007+3.7+0.027 ms clock, 0.028+0.062/3.6/0.22+0.11 ms cpu, 4->5->5 MB, 5 MB goal, 4 P
+
+gc 1 代表第一次执行
+@0.001s  这次GC之前程序已经运行的总时间
+0% 垃圾回收时间占用的百分比，
+0.007+3.7+0.027 ms clock垃圾回收的时间，几个时间依次是STW清扫的时间，并发标记和扫描的时间，STW标记时间
+0.028+0.062/3.6/0.22+0.11 ms cpu  垃圾回收占用cpu时间
+4->5->5 MB 堆的大小，gc后堆的大小，存活堆的大小
+5 MB goal 整体堆的大小
+4 P  使用的处理器数量
+```
+gctrace 能初步帮忙了解到gc执行的时间，次数，堆空间大小等宏观参数，但是无法帮助我们排查对于具体是那个方法，
+哪个地方导致消耗大量内存以及造成无法回收,那该如何具体定位gc问题呢？
+
+### pprof 定位具体gc问题
+
+- 使用，在你的程序加入以下代码
+```$xslt
+
+import (
+	_ "net/http/pprof"
+	"net/http"
+	"log"
+)
+go func() {
+
+        //ip:port 依据自己情况而定
+		log.Println(http.ListenAndServe("localhost:8082", nil))
+	}()
+```
+
+- 在浏览器中输入 -http://127.0.0.1:8082/debug/pprof/- 即可得到下图:
+![img](./golang-garbage-collection/WX20190310-223605@2x.png)
+
+也可以结合go tool 做更细致的操作
+```$xslt
+go tool pprof  http://127.0.0.1:8081/debug/pprof/heap       //查看堆的使用，即内存使用情况
+go tool pprof  http://127.0.0.1:8081/debug/pprof/profile    //查看cpu耗时，会详细列出每个函数的耗时
+go tool pprof  http://127.0.0.1:8081/debug/pprof/goroutine  //当前在运行的goroutine情况以及总数
+```
+
+
