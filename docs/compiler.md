@@ -27,13 +27,13 @@ typescript 提供了两类编程上的便利
 * 把高版本的 javascript 编译为低版本的 javascript 以兼容更多的 executor
 
 ### source.ts
-<<< @/compiler/tsc/source.ts
+<<< @/../compiler/tsc/source.ts
 
 ### build.sh
-<<< @/compiler/tsc/build.sh
+<<< @/../compiler/tsc/build.sh
 
 ### executable.js
-<<< @/compiler/tsc/executable.js
+<<< @/../compiler/tsc/executable.js
 
 可以看到类型信息没有了， for of 的语法被编译成了等价的普通的 for 循环
 
@@ -49,10 +49,10 @@ typescript 提供了两类编程上的便利
 rust 提供了更灵活和安全的类型系统来辅助描述驱动机器的逻辑
 
 ### hello.rs
-<<< @/compiler/rustc/hello.rs
+<<< @/../compiler/rustc/hello.rs
 
 ### build.sh
-<<< @/compiler/rustc/build.sh
+<<< @/../compiler/rustc/build.sh
 
 编译出来的是二进制的可执行文件，运行在CPU上
 
@@ -70,18 +70,18 @@ webpack/vue-loader/vue-template-compiler 组合成了一个完整的编译器。
 .vue 单文件组件，可以使用 vue 的模板语法，比 javascript 渲染 dom 的写法更可读。
 
 ### hello.vue
-<<< @/compiler/vue-loader/src/hello.vue
+<<< @/../compiler/vue-loader/src/hello.vue
 
 ### webpack.config.js
-<<< @/compiler/vue-loader/webpack.config.js
+<<< @/../compiler/vue-loader/webpack.config.js
 
 ### build.sh
-<<< @/compiler/vue-loader/build.sh
+<<< @/../compiler/vue-loader/build.sh
 
 编译出来的 hello.js 文件是这个样子的。它全局定义了 hello 这个变量。
 
 ### hello.js
-<<< @/compiler/vue-loader/dist/hello.js
+<<< @/../compiler/vue-loader/dist/hello.js
 
 其中 eval 的关键源代码，就是把 vue 模板编译出来的 javascript 代码
 
@@ -110,7 +110,7 @@ render._withStripped = true
 使用这个编译好的 hello.js 文件
 
 ### index.html
-<<< @/compiler/vue-loader/index.html
+<<< @/../compiler/vue-loader/index.html
 
 
 ## rollup-plugin-vue
@@ -120,25 +120,25 @@ rollup/rollup-plugin-vue/vue-template-compiler 组合成了一个完整的编译
 .vue 单文件组件，可以使用 vue 的模板语法，比 javascript 渲染 dom 的写法更可读。
 
 ### hello.vue
-<<< @/compiler/rollup-plugin-vue/src/hello.vue
+<<< @/../compiler/rollup-plugin-vue/src/hello.vue
 
 ### rollup.config.js
-<<< @/compiler/rollup-plugin-vue/rollup.config.js
+<<< @/../compiler/rollup-plugin-vue/rollup.config.js
 
 ### build.sh
-<<< @/compiler/rollup-plugin-vue/build.sh
+<<< @/../compiler/rollup-plugin-vue/build.sh
 
 编译出来的 hello.js 文件是这个样子的。它是一个 es6 的 module
 
 ### hello.js
-<<< @/compiler/rollup-plugin-vue/dist/hello.js
+<<< @/../compiler/rollup-plugin-vue/dist/hello.js
 
 通过 package.json 发布出去，可以被做为一个 es6 模块引用
 
 ### package.json
-<<< @/compiler/rollup-plugin-vue/package.json
+<<< @/../compiler/rollup-plugin-vue/package.json
 
 通过 es6 模块引用编译好的 .vue 文件
 
 ### App.vue
-<<< @/compiler/rollup-plugin-vue/demo/App.vue
+<<< @/../compiler/rollup-plugin-vue/demo/App.vue

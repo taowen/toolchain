@@ -18,7 +18,7 @@
 
 三色标记清除算法中将对象分为黑色、灰色、白色，黑色对象不能直接指向白色对象，即需要遵守三色不变性（tri-color invariant）。下面是 mutator 和 collector 并发执行中违反了三色不变性的例子：
 
-![img](./garbage-collection/tri-color.png)
+![img](../garbage-collection/tri-color.png)
 
 三色标记清除算法中使用mark_stack暂存灰色对象。当 mark_stack 为空时，标记阶段结束，此时所有白色对象将被视为垃圾对象，在清除阶段会被回收。在第3个阶段中，mutator 将对象的指针引用做了更新，新增了 A 指向 E 的指针（新增了一个从黑色对象指向白色对象的指针），删除了 B 指向 E 的指针。如果这个阶段不做同步处理，则由于 A 已经遍历完成，不会再次被加入 mark_stack 。collector 继续从 mark_stack 中获取对象 C、B 进行遍历，可以遍历到 D，因此 D 能被正确标记。但是已经无法遍历到 E，因此 E 在遍历结束时是白色。清除阶段，E 将会被当作垃圾对象进行回收。但是实际上 A 还在引用 E，所以可能引发程序 bug。
 
@@ -55,7 +55,7 @@ wirte_barrier(obj, field, newobj) {
 }
 ```
 
-![img](./garbage-collection/dijkstra-write-barrier.png)
+![img](../garbage-collection/dijkstra-write-barrier.png)
 
 #### Steele write barrier
 
@@ -71,7 +71,7 @@ wirte_barrier(obj, field, newobj) {
 }
 ```
 
-![img](./garbage-collection/steele-write-barrier.png)
+![img](../garbage-collection/steele-write-barrier.png)
 
 #### 汤浅太一 write barrier
 
@@ -87,5 +87,5 @@ write_barrier(obj, field, newobj) {
 }
 ```
 
-![img](./garbage-collection/snapshot-write-barrier.png)
+![img](../garbage-collection/snapshot-write-barrier.png)
 

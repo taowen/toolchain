@@ -38,15 +38,15 @@ ReactiveX 针对各平台提供了统一的响应式编程组件，它同时支�
 
 赞同和反对对投票的影响为两条平行的时间线，可以将它们分别视为流，并随着时间的前进更新投票数
 
-<<< @/asynchronous-programming/reactive-programming-sample.js
+<<< @/../asynchronous-programming/reactive-programming-sample.js
 
 ### 并行计算
 
-<<< @/asynchronous-programming/ParallelComputation.java
+<<< @/../asynchronous-programming/ParallelComputation.java
 
 ### RPC 并发请求
 
-<<< @/asynchronous-programming/ConcurrentRpc.java
+<<< @/../asynchronous-programming/ConcurrentRpc.java
 
 ### 数据流
 
@@ -71,7 +71,7 @@ ReactiveX 针对各平台提供了统一的响应式编程组件，它同时支�
 分页抓取和链接抓取分别为两个过程，前者将抓取到的链接传递给后者，后者根据接收到链接进行解析。编程语言支持更高阶的抽象，提供对应的原语，从而让程序员以更自然、简单的方式思考并发问题。
 对于关键字、正文也可使用同样的方式，将收集用户输入、持久化视为过程，输入结果与分页抓取通信、输出结果与输出过程通信，整体形成「关键字->搜索页->链接->正文」的模型，而不用过多的考虑其他细节。
 
-<<< @/asynchronous-programming/goroutine.go
+<<< @/../asynchronous-programming/goroutine.go
 
 
 
