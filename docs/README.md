@@ -18,16 +18,33 @@
 | [如何标识并定位动态链接库](dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
 | [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） 
 | [如何理解高级语言的垃圾回收](garbage-collection.md) | garbage collection |
-| [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation  | 
+| [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation  |
 | [如何降低异步编程的难度](asynchronous-programming.md) | asynchronous programming |
 | [如何深入准确地理解一门高阶语言的特性](functional-programming.md) | functional programming |
 | [如何理解GO GC原理和优化思路](golang-garbage-collection.md)|golang garbage collection|
+| [如何增强已有代码](code-enhancer.md)|code enhancer |
+| [如何降低外部服务使用的复杂度](service-management.md)|service-management |
+# 本地预览
+* 安装 https://yarnpkg.com/
+* 安装 https://github.com/tj/n
 
-作者邀请表
+```
+yarn install
+yarn dev
+```
+
+访问 http://localhost:8080/
+
+# 作者邀请表
+
+#作者邀请表
 * [taowen](https://github.com/taowen)
 * [qinguanri](https://github.com/qinguanri)
+  * zhangchengshuai
+  * nizeyang
 * zhangkun
 * zhanghuanming
 * yuhongyu
   * [chenyi](https://github.com/mrgeneralgoo)
 * dongqingming
+* [liqingsong](https://github.com/matoujun)

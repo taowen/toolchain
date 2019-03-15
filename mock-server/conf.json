@@ -1,0 +1,11 @@
+{
+    "/test":{
+        "protocol":"http",
+        "res_http_code":200,
+        "res_content_type":"application/json",
+        "res_body":{
+            "err_no":8000,
+            "err_msg":"success"
+        }
+    }
+}
