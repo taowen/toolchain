@@ -33,10 +33,10 @@ object 与 static library 彼此知道自己的链接关系。
 browserify 把多个 CJS 格式的静态链接库链接成一个完整自包含的executable。
 
 ### main.js
-<<< @/static-library-linker/browserify/main.js
+<<< @/../static-library-linker/browserify/main.js
 
 ### build.sh
-<<< @/static-library-linker/browserify/build.sh
+<<< @/../static-library-linker/browserify/build.sh
 
 | 构成 | 解释 |
 | --- | --- |
@@ -50,10 +50,10 @@ browserify 把多个 CJS 格式的静态链接库链接成一个完整自包含�
 webpack 是一个更全面的静态链接库的链接器，是 browserify 的改进。
 
 ### src/main.js
-<<< @/static-library-linker/webpack4/src/main.js
+<<< @/../static-library-linker/webpack4/src/main.js
 
 ### build.sh
-<<< @/static-library-linker/webpack4/build.sh
+<<< @/../static-library-linker/webpack4/build.sh
 
 | 构成 | 解释 |
 | --- | --- |
@@ -68,13 +68,13 @@ rollup 的出发点是改进静态链接库的格式。
 采用 ES6 Module 的导入导出语法，从而实现 tree-shaking 来减少静态链接后的文件尺寸。
 
 ### src/main.js
-<<< @/static-library-linker/rollup/src/main.js
+<<< @/../static-library-linker/rollup/src/main.js
 
 ### rollup.config.js
-<<< @/static-library-linker/rollup/rollup.config.js
+<<< @/../static-library-linker/rollup/rollup.config.js
 
 ### build.sh
-<<< @/static-library-linker/rollup/build.sh
+<<< @/../static-library-linker/rollup/build.sh
 
 | 构成 | 解释 |
 | --- | --- |
@@ -90,21 +90,21 @@ ar 把多个 linux 下用 c 编译出来的 .o 文件，合并成 .a 静态链�
 gcc 把 .o 文件和 .a 文件静态链接成 executable
 
 ### file1.c
-<<< @/static-library-linker/gcc/file1.c
+<<< @/../static-library-linker/gcc/file1.c
 
 ### file2.c
-<<< @/static-library-linker/gcc/file2.c
+<<< @/../static-library-linker/gcc/file2.c
 
 ### build1.sh
-<<< @/static-library-linker/gcc/build1.sh
+<<< @/../static-library-linker/gcc/build1.sh
 
 演示静态链接库如何产生出来
 
 ### main.c
-<<< @/static-library-linker/gcc/main.c
+<<< @/../static-library-linker/gcc/main.c
 
 ### build2.sh
-<<< @/static-library-linker/gcc/build2.sh
+<<< @/../static-library-linker/gcc/build2.sh
 
 演示静态链接库如何被使用
 
@@ -121,21 +121,21 @@ gcc 把 .o 文件和 .a 文件静态链接成 executable
 rustc 可以编译 .a 文件，也可以把多个 .a 文件链接成可执行文件
 
 ### file1.rs
-<<< @/static-library-linker/rustc/file1.rs
+<<< @/../static-library-linker/rustc/file1.rs
 
 ### file2.rs
-<<< @/static-library-linker/rustc/file2.rs
+<<< @/../static-library-linker/rustc/file2.rs
 
 ### build1.sh
-<<< @/static-library-linker/rustc/build1.sh
+<<< @/../static-library-linker/rustc/build1.sh
 
 演示静态链接库如何产生出来
 
 ### main.rs
-<<< @/static-library-linker/rustc/main.rs
+<<< @/../static-library-linker/rustc/main.rs
 
 ### build2.sh
-<<< @/static-library-linker/rustc/build2.sh
+<<< @/../static-library-linker/rustc/build2.sh
 
 演示静态链接库如何被使用
 

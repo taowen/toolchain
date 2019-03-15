@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "@rollup-plugin-vue/demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "@compiler/rollup-plugin-vue": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli": "^3.5.0",
+    "@vue/cli-service-global": "^3.5.0"
+  }
+}

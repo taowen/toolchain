@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "browser-dynamic-script-tag",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "devDependencies": {
+    "serve": "^10.1.2"
+  }
+}
