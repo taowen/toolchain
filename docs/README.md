@@ -46,4 +46,5 @@ yarn dev
 * zhanghuanming
 * yuhongyu
   * [chenyi](https://github.com/mrgeneralgoo)
+* dongqingming
 * [liqingsong](https://github.com/matoujun)
