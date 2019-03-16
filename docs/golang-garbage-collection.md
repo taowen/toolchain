@@ -62,27 +62,31 @@ Golang GC 垃圾回收算法采用的是三色标记法，原理如下:
 ## Golang GC 优化实战样例
 
 ### gctrace 跟踪实时的gc
- 
+
+- 实验代码：
+ <<< @/../golang-garbage-collection/pprof_study.go
+
 - 启动gctrace
 ```$xslt
-GODEBUG=gctrace=1  go run main.go
+GODEBUG=gctrace=1  go run pprof_study.go
 //GODEBUG=gctrace=1 ./main
 ```
 - 效果如下图:
 
-![img](./golang-garbage-collection/WX20190310-214034@2x.png)
+![img](../golang-garbage-collection/WX20190316-095724@2x.png)
 
 说明:
 ```$xslt
-gc 1 @0.001s 0%: 0.007+3.7+0.027 ms clock, 0.028+0.062/3.6/0.22+0.11 ms cpu, 4->5->5 MB, 5 MB goal, 4 P
+gc 5 @0.422s 0%: 0.009+18+0.037 ms clock, 0.039+0.15/18/24+0.14 ms cpu, 49->52->49 MB, 52 MB goal, 4 P
 
-gc 1 代表第一次执行
-@0.001s  这次GC之前程序已经运行的总时间
+
+gc 5 代表第5次执行
+@0.422s  这次GC之前程序已经运行的总时间
 0% 垃圾回收时间占用的百分比，
-0.007+3.7+0.027 ms clock垃圾回收的时间，几个时间依次是STW清扫的时间，并发标记和扫描的时间，STW标记时间
-0.028+0.062/3.6/0.22+0.11 ms cpu  垃圾回收占用cpu时间
-4->5->5 MB 堆的大小，gc后堆的大小，存活堆的大小
-5 MB goal 整体堆的大小
+0.009+18+0.037 ms clock垃圾回收的时间，几个时间依次是STW清扫的时间，并发标记和扫描的时间，STW标记时间
+0.039+0.15/18/24+0.14 ms cpu  垃圾回收占用cpu时间
+49->52->49 MB 堆的大小，gc后堆的大小，存活堆的大小
+52 MB goal 整体堆的大小
 4 P  使用的处理器数量
 ```
 gctrace 能初步帮忙了解到gc执行的时间，次数，堆空间大小等宏观参数，但是无法帮助我们排查对于具体是那个方法，
@@ -104,12 +108,10 @@ go func() {
 		log.Println(http.ListenAndServe("localhost:8082", nil))
 	}()
 ```
-- 一下是一段我写的一段实验代码：
-<<< @/golang-garbage-collection/pprof_study.go
 
 
 - 在浏览器中输入 -http://127.0.0.1:8082/debug/pprof/- 即可得到:
-![img](./golang-garbage-collection/WX20190310-223605@2x.png)
+![img](../golang-garbage-collection/WX20190310-223605@2x.png)
 
 也可以结合go tool 做更细致的操作
 ```$xslt
@@ -158,7 +160,7 @@ flat代表单个函数的运行时间，而cum则是累加的时间 使用web �
 
 web命令 是生成一张svg图然后再浏览器中展示
 效果如下图：
-![img](./golang-garbage-collection/WX20190313-103553@2x.png)
+![img](../golang-garbage-collection/WX20190313-103553@2x.png)
 ps:如果想结合图形查看则需要安装graphviz
   
     - mac: brew install graphviz
@@ -277,7 +279,9 @@ bogon:studygo didi$ go build --gcflags=-m pprof_study.go
 结果发现 resp.Body 被分配到堆上，可以初步定为可能是http body没有close掉导致频繁GC
 
 我们再来看下profile中调用栈gc耗时时间
-![img](./golang-garbage-collection/pprof002.svg)
+![img](../golang-garbage-collection/pprof002.svg)
+ 
+ 
  
 果不其然确实是resp.Body未被关闭导致频繁GC
 
