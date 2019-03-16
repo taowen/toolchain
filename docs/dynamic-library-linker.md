@@ -40,16 +40,16 @@ JavaScript 主流的动态链接库有以下几种，各自使用的linker是不
 ## 传统浏览器 - 全局命名空间
 
 ### index.html
-<<< @/dynamic-library-linker/browser-global-symbol/index.html
+<<< @/../dynamic-library-linker/browser-global-symbol/index.html
 
 ### library.js
-<<< @/dynamic-library-linker/browser-global-symbol/library.js
+<<< @/../dynamic-library-linker/browser-global-symbol/library.js
 
 ### build.sh
-<<< @/dynamic-library-linker/browser-global-symbol/build.sh
+<<< @/../dynamic-library-linker/browser-global-symbol/build.sh
 
 ### output.txt
-<<< @/dynamic-library-linker/browser-global-symbol/output.txt
+<<< @/../dynamic-library-linker/browser-global-symbol/output.txt
 
 executable 和 dynamic library 之间的通过全局变量 window 上的全局变量实现互相调用。
 `call_library` 这个函数其实就是定义在 `window` 上的变量。
@@ -64,27 +64,20 @@ executable 和 dynamic library 之间的通过全局变量 window 上的全局�
 
 JavaScript 代码内没有直接的动态加载的支持，用 script 标签加载的 url 无法动态计算出来。一个hack的方法是通过 DOM API 创建 script 标签。
 
-```js
-// http://localhost/library.js
-console.log('i am the library')
-```
+### index.html
+<<< @/../dynamic-library-linker/browser-dynamic-script-tag/index.html
 
-```html
-// http://localhost/index.html
-<html>
-<head>
-<script>
-var head= document.getElementsByTagName('head')[0];
-var script= document.createElement('script');
-script.type= 'text/javascript';
-script.src= './library.js';
-head.appendChild(script);
-</script>
-</head>
-<body>
-</body>
-</html>
-```
+### library.js
+<<< @/../dynamic-library-linker/browser-dynamic-script-tag/library.js
+
+### build.sh
+<<< @/../dynamic-library-linker/browser-dynamic-script-tag/build.sh
+
+| 构成 | 对应 |
+| --- | --- |
+| executable | 直接嵌入到 index.html 的 `<script>` 标签的 JavaScript 代码 |
+| dynamic library | library.js |
+| dynamic linker | 浏览器 |
 
 ## CJS 的代表 nodejs
 
