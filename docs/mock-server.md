@@ -20,7 +20,7 @@
 
 ## 解决方案示例
 ####配置示例
-<<< @/mock-server/conf.json
+<<< @/../mock-server/conf.json
 
 ```
 {
@@ -36,10 +36,10 @@
 }
 ```
 ### response.go
-<<< @/mock-server/response.go
+<<< @/../mock-server/response.go
 
 ### main.go
-<<< @/mock-server/main.go
+<<< @/../mock-server/main.go
 
 运行后，server每个1秒刷一次配置，可随时手动修改，到达mock效果
 

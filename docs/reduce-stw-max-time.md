@@ -16,11 +16,11 @@ Golang 1.1 版本采用标记清除算法实现垃圾回收，标记阶段采用
 
 STW 方式的GC：
 
-![img](./garbage-collection/stw-gc.png)
+![img](../garbage-collection/stw-gc.png)
 
 增量式 GC：
 
-![img](./garbage-collection/inc-gc.png)
+![img](../garbage-collection/inc-gc.png)
 
 #### 三色标记-清除算法
 

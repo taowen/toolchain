@@ -22,7 +22,7 @@
 
 ### 垃圾回收流程
 详细过程如下图：
-![img](./golang-garbage-collection/gc.png)
+![img](../golang-garbage-collection/gc.png)
 
 ####说明：
 
@@ -36,7 +36,7 @@
   
 - 回收过程目前是可以并行执行执行 
 
-<<< @/golang-garbage-collection/gc_m.cpp
+<<< @/../golang-garbage-collection/gc_m.cpp
 
 
 ### 如何确定哪些对象需要回收？
@@ -47,7 +47,7 @@ Golang GC 垃圾回收算法采用的是三色标记法，原理如下:
     3. 从队列中取出所有的灰色对象，将这轮灰色对象所引用的对象标记为灰色放入队列，并将自己标记成黑色
     4. 重复3，直到灰色队列为空。此时剩余的白色对象即为垃圾，执行回收。
  
- ![img](./golang-garbage-collection/Animation_of_tri-color_garbage_collection.gif)
+ ![img](../golang-garbage-collection/Animation_of_tri-color_garbage_collection.gif)
 
 ### 三色标记法缺点，golang 怎么来解决这个问题?
 
