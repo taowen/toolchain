@@ -22,7 +22,7 @@
 | [如何降低异步编程的难度](asynchronous-programming.md) | asynchronous programming |
 | [如何深入准确地理解一门高阶语言的特性](functional-programming.md) | functional programming |
 | [如何理解GO GC原理和优化思路](golang-garbage-collection.md)|golang garbage collection|
-| [如何增强已有代码](code-enhancer.md)|code enhancer |
+| [如何动态修改已有代码](code-enhancer.md)|code enhancer |
 | [如何降低外部服务使用的复杂度](service-management.md)|service-management |
 # 本地预览
 * 安装 https://yarnpkg.com/
