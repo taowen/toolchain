@@ -1,8 +1,7 @@
 /**
  * @author liqingsong on 2019/3/6
- * @project javalang-common
  */
-public class Bean {
+public class Bean implements BeanService{
     private int  f;
 
     public int getF() {
@@ -19,5 +18,10 @@ public class Bean {
 
     public static void main(String[] args) {
         Bean.hello();
+    }
+
+    @Override
+    public void service1() {
+        System.out.println("echo from service1");
     }
 }
