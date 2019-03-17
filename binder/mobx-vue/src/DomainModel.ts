@@ -1,6 +1,5 @@
 import { action, computed, observable } from "mobx";
 export default class DomainModel {
-    @observable age = 10;
     @observable items: string[] = [];
 
     @computed get itemsCount() {
