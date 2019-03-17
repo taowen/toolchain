@@ -42,7 +42,7 @@ func shallowCopy(teamA *Team) {
 
 ![img](../golang-deep-copy/shallow_copy.jpg)
 
-可见对于teamB的操作影响到了teamA。如若对于teamB的操作影响不了teamA，则将其称为深拷贝。
+可见对于teamB的操作影响到了teamA。如若对于teamB的操作影响不了teamA，则将其称为**深拷贝**。
 
 ### 深拷贝方法一：序列化
 
