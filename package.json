@@ -4,7 +4,8 @@
     "docs",
     "compiler/*",
     "compiler/*/demo",
-    "static-library-linker/*"
+    "static-library-linker/*",
+    "binding/*"
   ],
   "scripts": {
     "dev": "vuepress dev docs",

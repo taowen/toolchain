@@ -51,5 +51,5 @@ javap -c Bean.class：
 在正常的hello方法body前后添加了start，end输出。
 
 ### Haskell快排示例
-<<< @/../code-enhancer/Bean.java
-<<< @/../code-enhancer/AsmModifyMethod.java
+<<< @/code-enhancer/Bean.java
+<<< @/code-enhancer/AsmModifyMethod.java

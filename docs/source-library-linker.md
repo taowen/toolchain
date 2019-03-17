@@ -25,16 +25,16 @@
 ## tsc
 
 ### src/main.ts
-<<< @/../source-library-linker/tsc/src/main.ts
+<<< @/source-library-linker/tsc/src/main.ts
 
 ### src/lib.ts
-<<< @/../source-library-linker/tsc/src/lib.ts
+<<< @/source-library-linker/tsc/src/lib.ts
 
 ### build.sh
-<<< @/../source-library-linker/tsc/build.sh
+<<< @/source-library-linker/tsc/build.sh
 
 ### dist/object.js
-<<< @/../source-library-linker/tsc/dist/object.js
+<<< @/source-library-linker/tsc/dist/object.js
 
 | 构成 | 对应 |
 | --- | --- |
@@ -46,16 +46,16 @@
 ## go
 
 ### go.mod
-<<< @/../source-library-linker/go/go.mod
+<<< @/source-library-linker/go/go.mod
 
 ### main.go
-<<< @/../source-library-linker/go/main.go
+<<< @/source-library-linker/go/main.go
 
 ### lib/lib.go
-<<< @/../source-library-linker/go/lib/lib.go
+<<< @/source-library-linker/go/lib/lib.go
 
 ### build.sh
-<<< @/../source-library-linker/go/build.sh
+<<< @/source-library-linker/go/build.sh
 
 | 构成 | 对应 |
 | --- | --- |

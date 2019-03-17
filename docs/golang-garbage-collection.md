@@ -35,7 +35,7 @@
   
 - 回收过程目前是可以并行执行执行 
 
-<<< @/../golang-garbage-collection/gc_m.cpp
+<<< @/golang-garbage-collection/gc_m.cpp
 
 
 ### 如何确定哪些对象需要回收？
