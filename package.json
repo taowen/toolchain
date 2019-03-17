@@ -1,14 +1,14 @@
 {
   "private": true,
   "workspaces": [
+    "docs",
     "compiler/*",
-    "static-library-linker/*"
+    "compiler/*/demo",
+    "static-library-linker/*",
+    "binding/*"
   ],
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
-  },
-  "devDependencies": {
-    "vuepress": "^1.0.0-alpha.37"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   }
 }

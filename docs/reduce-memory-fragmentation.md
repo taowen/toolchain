@@ -1,4 +1,4 @@
-[TOC]
+[[TOC]]
 
 # 要解决的问题
 
@@ -95,4 +95,38 @@ ThreadCache 维护着一个数组 FreeList，数组的索引是内存块的大�
 
 通过伙伴算法进行回收得到的应该是一个大小为 3 的 span。
 
+## JeMalloc
 
+### 使用
+
+1.编译时通过`-ljemalloc` 链接器接入 jemalloc
+
+2.运行时指定`LD_PRELOAD="/usr/lib/libjemalloc.so"`
+
+整体内存申请策略
+
+每个线程有 tcache，然后往上有 extent，再往上有 arena ，最后是 OS。
+
+### 如何减少内存碎片
+
+jemalloc 对小内存的划分方式和 tcmalloc 类似，并不都是2的次幂，大内存的划分方式则是从 4*page 开始。
+
+对于小内存的分配，jemalloc 引入一个更细粒度的结构 slab。每种 slab 对应的就是不同大小的小内存块。小内存块也是有缓存的，叫做 cache_bin，所以小内存分配的流程是：
+
+`cache_bin->tcache->extent->arena->os`
+
+对于大内存的分配则不走 tcache ，直接从 extent 取。
+
+内存整体上的分配方式和 jemalloc 类似，都是不够了就往上级取，但是区别在于 extent 分成了 3 级：`extents_dirty` 、`extents_muzzy`和`extents_retained`：
+
+1. `extents_dirty`可能是回收来的也可能是分配后剩余的部分。
+2. `extents_muzzy`则是`extents_dirty`回收后的。
+3. `extents_retained`则是`extents_muzzy`回收后的。
+
+jemalloc 在分配内存的时候优先从 `extents_dirty`里面分配，不够了会优先对它进行回收然后再分配。分配的方式通过 Pairing Heap(配对堆)而不再是红黑树来找到一个最合适的大小 m，可能 m 依然大于所需的 n，为了减少内存碎片，会将多余的部分再放回 `extents_dirty`，放回的过程中依然会使用伙伴算法进行合并操作进一步减少内存碎片。
+
+从`extents_muzzy`和`extents_retained`上分配内存则使用的另外的策略来逐级减少内存碎片问题：使用满足大小且排在最前面的内存块，即一直使用最旧的内存块。后续减少内存碎片的手段与 `extents_dirty`里面的操作一样。
+
+所以 jemalloc 先是将依据 CPU 核心数将内存分成不同数量且各自独立的 arena。然后内部对内存做了类似生命周期的分级策略，对分配最频繁的一级`extents_dirty`通过 Pairing Heap 来选择最合适的内存块，并且进行伙伴算法来减少内存碎片，后面 2 级则遵循“最旧优先”的策略来分配内存，同时使用伙伴算法来减少内存碎片。
+
+性能上则是通过独立的 arena 来减少线程同步的开销，通过 extents 以及 tcache、bin 等细分结构来降低锁的粒度。但是因为层级划分更细，需要更多的空间来存储相应的信息，同时由于 arena 互相独立，arena 的内存分配上可能不连续，导致内存回收效率低下。

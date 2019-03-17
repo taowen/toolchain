@@ -1,0 +1,1 @@
+webpack-cli --mode development src/hello.vue --output dist/hello.js
