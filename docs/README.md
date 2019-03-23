@@ -26,6 +26,8 @@
 | [如何降低外部服务使用的复杂度](service-management.md)|service-management |
 | [如何屏蔽因为表现形式差异引起的思维复杂度](binder.md)| binder |
 | [如何对GO中的结构体进行深拷贝](golang-deep-copy.md)| golang deep copy |
+| [如何识别具体的错误值](identifiy-specific-errors.md)| identifiy specific errors |
+
 # 本地预览
 * 安装 https://yarnpkg.com/
 * 安装 https://github.com/tj/n

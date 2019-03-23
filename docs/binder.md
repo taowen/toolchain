@@ -63,3 +63,16 @@ HTML DOM, Mysql Table, ElaticSearch 等等技术都有一个自己对于状态�
 | source | HTML DOM |
 | target | Javascript Object Model |
 | binder | vue + mobx |
+
+## vue
+
+### App.vue
+<<< @/binder/vue/src/App.vue
+
+vue 没有 mobx + vue 那么灵活。状态和视图必须在一个component里。如果要多个视图共享一个后端状态，就需要其他库的协助。
+
+| 构成 | 解释 |
+| --- | --- |
+| source | HTML DOM |
+| target | Javascript Object Model |
+| binder | vue |
