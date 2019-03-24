@@ -27,6 +27,7 @@
 | [如何屏蔽因为表现形式差异引起的思维复杂度](binder.md)| binder |
 | [如何对GO中的结构体进行深拷贝](golang-deep-copy.md)| golang deep copy |
 | [如何识别具体的错误值](identifiy-specific-errors.md)| identifiy specific errors |
+| [如何实现golang程序panic时的自救](golang-recover-from-panics.md)| golang recover from panics |
 
 # 本地预览
 * 安装 https://yarnpkg.com/
