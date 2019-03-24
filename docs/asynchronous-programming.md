@@ -73,5 +73,14 @@ ReactiveX 针对各平台提供了统一的响应式编程组件，它同时支�
 
 <<< @/asynchronous-programming/goroutine.go
 
+## Actor
+
+actor 和 goroutine&channel 的差异从抽象上并不是很大，侧重点有所不同，actor 中接收方占有主动权，并以自己的状态决定消息的处理方式。由于 actor 的完全异步模式，它更适用于分布式系统的对 latency 并不敏感的场景。
+比如要对一个视频流进行分析，进行 asr 和 ocr 识别，并将 asr 结果进行 nlp 处理抽取关键词，考虑到这里有一个消息生产方和多个消费方，如果使用 golang 的方式得为不同的处理创建多个 channel（显然这是不是明智的选择），而和 actor 绑定的 mailbox 很自然地被应用在了此处。
+并且，actor 的实现之一 akka 提供了便于一体化集成的调度、扩容。
+
+<<< @/asynchronous-programming/Analysis.java
+
+上面代码也体现了出了，基于高级抽象的代码表达力更强、编码起来也更加简单。（想想刚开始写程序时，两个脚本通过数据库交互，一个脚本写，另一个读并更新状态，并且后者还需要维护、更新状态、处理及信息扩容的代码量，技术进步既是生产力啊）
 
 
