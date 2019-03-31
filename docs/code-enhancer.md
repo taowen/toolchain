@@ -191,11 +191,12 @@ public class ChangeAssertProcessor extends AbstractProcessor {
 }
 
 ~~~
-####1）编译processor：
+### 运行测试代码
+#### 1）编译processor：
 javac -cp /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/lib/tools.jar ChangeAssertProcessor.java 
-####2）编译example：
+#### 2）编译example：
 javac -processor ChangeAssertProcessor AssertExample.java
-####3）运行example：
+#### 3）运行example：
 java -disableassertions AssertExample
 
 输出：
@@ -204,7 +205,7 @@ java -disableassertions AssertExample
 Exception in thread "main" java.lang.AssertionError: args must be null
         at AssertExample.main(AssertExample.java:5)
 ~~~
-####4）查看修改后的example：
+#### 4）查看修改后的example：
 ```javac -processor ChangeAssertProcessor -printsource  -s ./org   AssertExample.java ```
 生成的AssertExample.java放到org目录下，防止覆盖旧的代码。
 ~~~java
