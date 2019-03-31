@@ -29,6 +29,7 @@
 | [如何识别具体的错误值](identifiy-specific-errors.md)| identifiy specific errors |
 | [如何实现golang程序panic时的自救](golang-recover-from-panics.md)| golang recover from panics |
 | [如何解决golang应用插件化](golang-pulgin-system.md.md)|golang-pulgin-system |
+| [如何理解GO中特殊情况下GC引起的卡死](golang-gc-stw.md)|golang gc stw |
 # 本地预览
 * 安装 https://yarnpkg.com/
 * 安装 https://github.com/tj/n
