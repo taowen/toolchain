@@ -49,7 +49,3 @@
 Write Back 也称为 Write Behind Caching， Linux 文件系统的 page cache 算法就是它。
 
 该策略是针对写操作来的，它也是直接更新缓存，但是缓存系统是异步批量的去更新数据源，批量更新可以将一些操作进行合并有助于提高性能，但这种 lazy write 可能会带来数据丢失问题。
-
-## Consistency
-
-通过 2/3PC 或是 Paxos 等协议保证强一致性，但这样不符合缓存用于提升性能这一场景。
