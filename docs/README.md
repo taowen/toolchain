@@ -23,7 +23,7 @@
 | [如何深入准确地理解一门高阶语言的特性](functional-programming.md) | functional programming |
 | [如何理解GO GC原理和优化思路](golang-garbage-collection.md)|golang garbage collection|
 | [如何增强已有代码](code-enhancer.md)|code enhancer |
-| [如何降低外部服务使用的复杂度](service-management.md)|service management |
+| [如何降低服务接入成本](service-management.md) |service management |
 | [如何屏蔽因为表现形式差异引起的思维复杂度](binder.md)| binder |
 | [如何对GO中的结构体进行深拷贝](golang-deep-copy.md)| golang deep copy |
 | [如何识别具体的错误值](identifiy-specific-errors.md)| identifiy specific errors |
