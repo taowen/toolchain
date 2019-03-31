@@ -16,14 +16,18 @@
 | [如何驱动机器按照人的要求自动化执行重复的工作](executor.md) | executor |
 | [如何复用其他人的工作又减少executable的文件尺寸](dynamic-library-linker.md) | dynamic library linker（一般是 executor 的一部分） |
 | [如何标识并定位动态链接库](dynamic-library-resolver.md) | dynamic library resolver（linker 的一部分） |
-| [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） 
+| [如何引用动态链接库指定的接口](symbol-binder.md) | symbol binder（linker 的一部分） |
 | [如何理解高级语言的垃圾回收](garbage-collection.md) | garbage collection |
 | [如何减少内存碎片](reduce-memory-fragmentation.md) | reduce memory fragmentation  |
 | [如何降低异步编程的难度](asynchronous-programming.md) | asynchronous programming |
 | [如何深入准确地理解一门高阶语言的特性](functional-programming.md) | functional programming |
-| [如何解决Golang垃圾的回收问题](golang-garbage-collection.md)|golang garbage collection|
+| [如何理解GO GC原理和优化思路](golang-garbage-collection.md)|golang garbage collection|
 | [如何增强已有代码](code-enhancer.md)|code enhancer |
 | [如何降低外部服务使用的复杂度](service-management.md)|service-management |
+| [如何屏蔽因为表现形式差异引起的思维复杂度](binder.md)| binder |
+| [如何对GO中的结构体进行深拷贝](golang-deep-copy.md)| golang deep copy |
+| [如何识别具体的错误值](identifiy-specific-errors.md)| identifiy specific errors |
+| [如何实现golang程序panic时的自救](golang-recover-from-panics.md)| golang recover from panics |
 | [如何解决golang应用插件化](golang-pulgin-system.md.md)|golang-pulgin-system |
 # 本地预览
 * 安装 https://yarnpkg.com/

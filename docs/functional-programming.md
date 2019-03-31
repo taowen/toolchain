@@ -61,8 +61,8 @@ ghci>fmap (+1) [0..9]
 ~~~
 
 ### Haskell快排示例
-<<< @/../functional-programming/haskell-sample.hs
+<<< @/functional-programming/haskell-sample.hs
 
 ### Java函数式编程示例
 
-<<< @/../functional-programming/TestFunction.java
+<<< @/functional-programming/TestFunction.java
