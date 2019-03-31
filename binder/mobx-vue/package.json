@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "@binder/mobx-vue",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "dependencies": {
+    "mobx": "^5.9.0",
+    "mobx-vue": "^2.0.8",
+    "vue": "^2.6.9"
+  },
+  "devDependencies": {
+    "@vue/cli": "^3.5.1",
+    "@vue/cli-plugin-typescript": "^3.5.1",
+    "@vue/cli-service": "^3.5.1",
+    "@vue/cli-service-global": "^3.5.1",
+    "typescript": "^3.3.3333"
+  }
+}
